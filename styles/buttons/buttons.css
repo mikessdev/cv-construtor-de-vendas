@@ -1,0 +1,14 @@
+
+.info-dropdown-btn {
+    background-color: var(--light-green-color);
+    text-transform: uppercase;
+    color: var(--white-color);
+    padding: 7px 14px 7px 14px;
+    border-radius: var(--default-radius);
+    display: flex;
+    align-items: center;
+}
+.info-dropdown-btn img {
+    margin-left: 5px;
+  
+}

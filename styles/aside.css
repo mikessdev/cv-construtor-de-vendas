@@ -1,0 +1,84 @@
+aside {
+    font-family: Verdana;
+    width: 600px;
+    background-color: var(--light-gray-color);
+    padding: 20px;
+}
+
+#aside-top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+#aside-top-container h1 {
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: var(--high-size);
+    color: var(--black-color);
+}
+
+#aside-top-container span {
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    font-size: var(--high-size);
+    color: var(--default-gray-color);
+}
+
+.dashed-line {
+    size: 1;
+    border: 1px dashed var(--fog-gray-color);
+}
+
+/*================ Percentage bar status ================*/
+
+#percentage-bar-container {
+    background-color: var(--white-color);
+    border-radius: var(--default-radius);
+    margin: 20px 0 20px 0;
+    padding: 15px;
+}
+
+#percentage-bar-container #percentage-bar-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#percentage-bar-container #percentage-bar-header-container  #percentage{
+    display: flex;
+    align-items: center;
+    font-size: var(--medium-size);
+    color: var( --black-color);
+}
+
+#percentage-bar-container #percentage-bar-header-container #percentage-bar-text-container span{
+    display: flex;
+    align-items: center;
+    font-size: var(--medium-size);
+    color: var(--default-gray-color);
+    margin-left: 7px;
+    text-transform: uppercase;
+}
+
+#percentage-bar-container #percentage-bar-text-container {
+    display: flex;
+}
+
+#percentage-bar-container #bar-container {
+    background-color: var(--light-2-gray-color);
+    width: 100%;
+    height: 7px;
+    border-radius: var(--high-radius);
+}
+
+#percentage-bar-container #bar-container #bar-indicator {
+    background: linear-gradient(90deg, #FC9C33 49.57%, #1D8F21 100%);
+    width: 75%;
+    height: 7px;
+    border-radius: var(--high-radius);
+}

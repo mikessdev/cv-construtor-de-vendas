@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Verdana', sans-serif;
+}
+
+:root {
+    /*================ Colors ================*/ 
+    --white-color: #FFFFFF;
+    --black-color: #333333;
+    --light-gray-color: #F5F5F5;
+    --light-2-gray-color: #E7E7E7;
+    --fog-gray-color: #DDDDDD;
+    --default-gray-color: #666;
+    --light-green-color: #409A75;
+
+
+
+
+ /*================ Font sizes ================*/ 
+    --high-size: 10px;
+    --medium-size: 10px;
+
+ /*================ Border radius ================*/ 
+    --default-radius: 4px;
+    --high-radius: 40px;
+}

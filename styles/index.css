@@ -8,7 +8,7 @@
 }
 
 :root {
-    /*================ Colors ================*/ 
+    /*================ Colors ================*/
     --white-color: #FFFFFF;
     --black-color: #333333;
     --light-gray-color: #F5F5F5;
@@ -25,38 +25,42 @@
 
 
 
- /*================ Font sizes ================*/ 
+    /*================ Font sizes ================*/
     --high-size: 10px;
     --medium-size: 8px;
 
- /*================ Border radius ================*/ 
+    /*================ Border radius ================*/
     --default-radius: 4px;
     --high-radius: 40px;
 }
 
 /*================ Template ================*/
 
-body {
-    display: flex;
-}
 
+@media (min-width: 680px) {
+    body {
+        display: flex;
 
-main {
-    width: 66%;
-}
-
-aside {
-    width: 33%;
-}
-
-@media (max-width: 600px) {
+    }
+    
     main {
-        background-color: #51A351;
+        width: 66%;
+    }
+
+    aside {
+        width: 33%;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 
-/*================ Text styles ================*/ 
+/*================ Text styles ================*/
 .title {
     font-weight: 700;
     line-height: normal;
@@ -70,10 +74,10 @@ aside {
 }
 
 .title-variant-color {
-    color: var( --default-gray-color);
+    color: var(--default-gray-color);
 }
 
-.sub-title { 
+.sub-title {
     font-size: var(--medium-size);
     color: var(--default-gray-color);
     text-transform: uppercase;

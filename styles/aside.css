@@ -1,15 +1,13 @@
 aside {
     font-family: Verdana;
-    width: 600px;
     background-color: var(--light-gray-color);
-    padding: 20px;
+    padding: 20px 20px 0 20px;
+    height: 100vh;
 }
 
 #aside-top-container {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
 }
 
 #aside-top-container span {
@@ -21,8 +19,8 @@ aside {
 }
 
 .dashed-line {
-    size: 1;
     border: 1px dashed var(--fog-gray-color);
+    margin: 20px 0 20px 0;
 }
 
 /*================ Percentage bar status ================*/
@@ -30,8 +28,8 @@ aside {
 #percentage-bar-container {
     background-color: var(--white-color);
     border-radius: var(--default-radius);
-    margin: 20px 0 20px 0;
-    padding: 15px;
+    padding: 14px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #percentage-bar-container #percentage-bar-header-container {
@@ -40,15 +38,16 @@ aside {
     margin-bottom: 8px;
 }
 
-#percentage-bar-container #percentage-bar-header-container  #percentage{
+#percentage-bar-container #percentage-bar-header-container #percentage {
     display: flex;
     align-items: center;
     font-size: var(--medium-size);
-    color: var( --black-color);
+    color: var(--black-color);
 }
 
 #percentage-bar-container #percentage-bar-text-container {
     display: flex;
+    align-items: center;
 }
 
 #percentage-bar-container #percentage-bar-text-container img {
@@ -72,22 +71,34 @@ aside {
 /*================ Cards ================*/
 #cards-container {
     display: flex;
+    justify-content: space-between;
+    height: 115px;
 }
+
+.card-grouping {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 104px;
+    max-width: 250px;
+}
+
 .card-container {
-    background-color: var(--white-color);
-    width: 160px; 
-    padding: 15px;
     display: flex;
     align-items: center;
-    border-radius: var( --default-radius);
-    margin-right: 10px;
+    background-color: var(--white-color);
+    
+  
+    padding: 14px;
+    border-radius: var(--default-radius);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card-content {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    overflow-wrap: initial;
+    padding: 0px;
 }
 
 .card-elipse {
@@ -111,4 +122,10 @@ aside {
 
 #elipse-available {
     background-color: var(--default-green-color);
+}
+
+@media (max-width: 600px) {
+    main {
+        background-color: #51A351;
+    }
 }

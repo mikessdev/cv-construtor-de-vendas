@@ -34,7 +34,26 @@
     --high-radius: 40px;
 }
 
+/*================ Template ================*/
 
+body {
+    display: flex;
+}
+
+
+main {
+    width: 66%;
+}
+
+aside {
+    width: 33%;
+}
+
+@media (max-width: 600px) {
+    main {
+        background-color: #51A351;
+    }
+}
 
 
 /*================ Text styles ================*/ 

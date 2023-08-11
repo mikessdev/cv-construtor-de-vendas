@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Verdana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/aside.css">
-    <link rel="stylesheet" href="styles/buttons/buttons.css">
+    <link rel="stylesheet" href="component/dropDown.css">
     <link rel="stylesheet" href="styles/card.css">
     <title>CV - Construtor de Vendas</title>
 </head>
@@ -22,11 +22,16 @@
                     1321 Unidade Disponível
                 </span>
             </div>
-            <div>
-                <Button class="info-dropdown-btn">Informações
-                    <img src="assets/icons/polygon.svg" alt="dropdown arrow">
+            <div id="dropDown-btn">
+                <Button class="info-dropdown-btn" onclick="toggleDropdown('dropdownContent')">Informações
+                    <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow">
                 </Button>
-
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#">Tabela de Preços</a>
+                    <a href="#">Valores dos Espaços</a>
+                    <a href="#">Arquivos do empreendimento</a>
+                    <a href="#">Materiais de Campanha</a>
+                </div>
             </div>
         </section>
         <hr class="dashed-line">
@@ -47,69 +52,85 @@
         <section>
             <h3 class="title title-color">Situação do empreendimento</h3>
             <div id="cards-container">
-                
-                    <div class="card-container">
-                        <div class='card-elipse' id="elipse-blocked">
-                        </div>
-                        <div class='card-content'>
-                            <span class="title title-variant-color">
-                                10
-                            </span>
-                            <span class="sub-title">
-                                Bloqueada
-                            </span>
-                        </div>
+
+                <div class="card-container">
+                    <div class='card-elipse' id="elipse-blocked">
                     </div>
-                    <div class="card-container">
-                        <div class='card-elipse' id="elipse-sold">
-                        </div>
-                        <div class='card-content'>
-                            <span class="title title-variant-color">
-                                59
-                            </span>
-                            <span class="sub-title">
-                                Vendida
-                            </span>
-                        </div>
+                    <div class='card-content'>
+                        <span class="title title-variant-color">
+                            10
+                        </span>
+                        <span class="sub-title">
+                            Bloqueada
+                        </span>
                     </div>
-         
-                    <div class="card-container">
-                        <div class='card-elipse' id="elipse-reserved">
-                        </div>
-                        <div class='card-content'>
-                            <span class="title title-variant-color">
-                                139
-                            </span>
-                            <span class="sub-title">
-                                Reservada
-                            </span>
-                        </div>
+                </div>
+                <div class="card-container">
+                    <div class='card-elipse' id="elipse-sold">
                     </div>
-                    <div class="card-container">
-                        <div class='card-elipse' id="elipse-available">
-                        </div>
-                        <div class='card-content'>
-                            <span class="title title-variant-color">
-                                1321
-                            </span>
-                            <span class="sub-title">
-                                Disponível
-                            </span>
-                        </div>
+                    <div class='card-content'>
+                        <span class="title title-variant-color">
+                            59
+                        </span>
+                        <span class="sub-title">
+                            Vendida
+                        </span>
                     </div>
-                
+                </div>
+
+                <div class="card-container">
+                    <div class='card-elipse' id="elipse-reserved">
+                    </div>
+                    <div class='card-content'>
+                        <span class="title title-variant-color">
+                            139
+                        </span>
+                        <span class="sub-title">
+                            Reservada
+                        </span>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class='card-elipse' id="elipse-available">
+                    </div>
+                    <div class='card-content'>
+                        <span class="title title-variant-color">
+                            1321
+                        </span>
+                        <span class="sub-title">
+                            Disponível
+                        </span>
+                    </div>
+                </div>
+
             </div>
         </section>
         <hr class="dashed-line">
         <section>
-            <h3 class="title title-color">Filtrar disponibilidade</h3>
+            <h3 class="title title-color filte-title">Filtrar disponibilidade</h3>
+            <div class="filter-container">
+                <Button class="filter-select-btn" onclick="toggleDropdown('Form-Dropdown-Content')">Escolha a etapa
+                    <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
+                </Button>
+                <div class="option-wrappe">
+                    <div class="option-dropdown" id="Form-Dropdown-Content">
+                        <a href="#">test</a>
+                        <a href="#">test</a>
+                        <a href="#">test</a>
+                        <a href="#">test</a>
+                    </div>
+
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
+
         </section>
     </aside>
     <main>
         <p>main</p>
     </main>
 
-    </script>
+    <script src="component/dropDown.js"></script>
 </body>
 
 </html>

@@ -15,16 +15,47 @@
     --light-2-gray-color: #E7E7E7;
     --fog-gray-color: #DDDDDD;
     --default-gray-color: #666;
+    --dark-gray-color: #999;
     --light-green-color: #409A75;
+
+    --default-red-color: #EC5D59;
+    --default-orange-color: #F89406;
+    --default-green-color: #51A351;
 
 
 
 
  /*================ Font sizes ================*/ 
     --high-size: 10px;
-    --medium-size: 10px;
+    --medium-size: 8px;
 
  /*================ Border radius ================*/ 
     --default-radius: 4px;
     --high-radius: 40px;
+}
+
+
+
+
+/*================ Text styles ================*/ 
+.title {
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: var(--high-size);
+}
+
+.title-color {
+    color: var(--black-color);
+}
+
+.title-variant-color {
+    color: var( --default-gray-color);
+}
+
+.sub-title { 
+    font-size: var(--medium-size);
+    color: var(--default-gray-color);
+    text-transform: uppercase;
 }

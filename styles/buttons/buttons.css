@@ -7,6 +7,7 @@
     border-radius: var(--default-radius);
     display: flex;
     align-items: center;
+    font-size: var(--high-size);
 }
 .info-dropdown-btn img {
     margin-left: 5px;

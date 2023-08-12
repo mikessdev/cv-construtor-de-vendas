@@ -1,0 +1,33 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--white-color);
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#sort-by {
+    color: var(--default-gray-color);
+    font-family: Verdana;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#main-dropdown img {
+    width: 9px;
+    height: 5px;
+    margin-left: 7px;
+}
+
+#main-dropdown span {
+   display: flex;
+   align-items: center;
+}

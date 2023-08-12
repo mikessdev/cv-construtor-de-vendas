@@ -2,7 +2,6 @@
 
 const toggleDropdown = (dropDown, dropdownContent) => {
     const dropdownContentContainer = document.getElementById(dropdownContent);
-
     dropdownContentContainer.style.display = dropdownContentContainer.style.display ===  "block" ?  "none" : "block";
     eventClickOut(dropDown, dropdownContent)
   }

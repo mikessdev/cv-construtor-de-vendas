@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/aside.css">
     <link rel="stylesheet" href="component/dropDown.css">
     <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>CV - Construtor de Vendas</title>
 </head>
 
@@ -23,7 +24,8 @@
                 </span>
             </div>
             <div id="dropDown-btn" class="dropDown">
-                <Button class="info-dropdown-btn" onclick="toggleDropdown('dropDown-btn', 'dropdownContent')">Informações
+                <Button class="info-dropdown-btn"
+                    onclick="toggleDropdown('dropDown-btn', 'dropdownContent')">Informações
                     <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow">
                 </Button>
                 <div class="dropdown-content" id="dropdownContent">
@@ -109,8 +111,8 @@
         <section>
             <h3 class="title title-color filte-title">Filtrar disponibilidade</h3>
             <div class="filter-container , dropDown" id="filter-dropDown-01">
-                <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-01', 'Form-Dropdown-01')"> <span
-                        id="btn-01">Escolha a etapa</span>
+                <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
+                    <span id="btn-01">Escolha a etapa</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
@@ -123,8 +125,9 @@
                 </div>
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-02">
-                <Button class="filter-select-btn" onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span
-                        id="btn-02">Escolha a quadra</span>
+                <Button class="filter-select-btn"
+                    onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span id="btn-02">Escolha a
+                        quadra</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
@@ -150,14 +153,32 @@
 
                 </div>
             </div>
-            <button id="filter-btn"  type="submit" onclick="getFiltersValue()">Filtrar disponibilidade</button>
+            <button id="filter-btn" type="submit" onclick="getFiltersValue()">Filtrar disponibilidade</button>
 
         </section>
     </aside>
     <main>
-        <p>main</p>
+        <header class="title" id="main-header">
+            <p id="main-title">Unidades do empreendimento</p>
+            <div id="main-dropdown">
+                <span onclick="toggleDropdown('main-dropdown', 'main-dropdown-content')">
+                    <p id="sort-by">Ordenar por <strong id="sort-by-text">Menor valor</strong></p>
+                    <img src="assets/icons/arrow.svg">
+                </span>
+                <div id="main-dropdown-content">
+                    <a href="#"  onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Bloco</a>
+                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Quartos</a>
+                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Andar</a>
+                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Área total</a>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="dashed-line"></div>
+
     </main>
-    
+
     <script src="index.js"></script>
     <script src="component/dropDown.js"></script>
 </body>

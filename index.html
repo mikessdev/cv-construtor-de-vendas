@@ -22,11 +22,11 @@
                     1321 Unidade Disponível
                 </span>
             </div>
-            <div id="dropDown-btn">
+            <div id="dropDown-btn" class="dropDown">
                 <Button class="info-dropdown-btn" onclick="toggleDropdown('dropdownContent')">Informações
                     <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow">
                 </Button>
-                <div class="dropdown-content" id="dropdownContent">
+                <div class="dropdown-content , dropDown-content-event" id="dropdownContent">
                     <a href="#">Tabela de Preços</a>
                     <a href="#">Valores dos Espaços</a>
                     <a href="#">Arquivos do empreendimento</a>
@@ -108,13 +108,13 @@
         <hr class="dashed-line">
         <section>
             <h3 class="title title-color filte-title">Filtrar disponibilidade</h3>
-            <div class="filter-container" id="dropDown-01">
+            <div class="filter-container , dropDown">
                 <Button class="filter-select-btn" onclick="toggleDropdown('Form-Dropdown-01')"> <span
                         id="btn-01">Escolha a etapa</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-01">
+                    <div class="option-dropdown , dropDown-content-event" id="Form-Dropdown-01">
                         <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 01</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 02</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 03</a>
@@ -122,13 +122,13 @@
 
                 </div>
             </div>
-            <div class="filter-container" id="dropDown-02">
+            <div class="filter-container , dropDown">
                 <Button class="filter-select-btn" onclick=" toggleDropdown('Form-Dropdown-02')"><span
                         id="btn-02">Escolha a quadra</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-02">
+                    <div class="option-dropdown , dropDown-content-event" id="Form-Dropdown-02">
                         <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 01</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 02</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 03</a>
@@ -136,13 +136,13 @@
 
                 </div>
             </div>
-            <div class="filter-container" id="dropDown-03">
+            <div class="filter-container , dropDown">
                 <Button class="filter-select-btn" onclick="toggleDropdown('Form-Dropdown-03')">
                     <span id="btn-03">Situação</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-03">
+                    <div class="option-dropdown , dropDown-content-event" id="Form-Dropdown-03">
                         <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 01</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 02</a>
                         <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 03</a>

@@ -1,3 +1,5 @@
+//TODO: Fechar eventListener
+
 const toggleDropdown = (dropDown, dropdownContent) => {
     const dropdownContentContainer = document.getElementById(dropdownContent);
 
@@ -19,18 +21,15 @@ const closeDropdown = (dropdownContent) => {
 
 
 const eventClickOut = (dropDown, dropdownContent) => {
-document.addEventListener("click", function(event) {
-
+document.addEventListener("click", (event) =>  {
   const dropDownContainer = document.getElementById(dropDown);
-  if(dropDownContainer){
+
     const dropdownContentContainer = document.getElementById(dropdownContent);
     const clickedOut = !dropDownContainer.contains(event.target);
     const dropDownIsOpen = dropdownContentContainer.style.display === "block";
 
     if (clickedOut && dropDownIsOpen) {
-      return closeDropdown(dropdownContent)
-    }
-  }
-
+       closeDropdown(dropdownContent)
+      }
 });
 }

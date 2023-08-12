@@ -62,9 +62,16 @@
   margin-top: 10px;
   border-radius: var(--default-radius);
   box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.04);
+
+  color: #666;
+  font-family: Verdana;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.option-wrappe {
+.option-wrapper {
   position: relative;
   top: -2px;
 }
@@ -74,11 +81,11 @@
   display: none;
   position: absolute;
   background-color: var(--white-color);
-  
-  
   z-index: 1;
   width: 100%;
 }
+
+
 
 .option-dropdown a {
   display: block;
@@ -86,6 +93,19 @@
   font-size: var(--high-size);
   text-decoration: none;
   line-height: 34px;
-  padding: 0 10px 0 10px;
+  padding: 0 14px 0 14px;
   border-radius: var(--default-radius);
+
+  color: #666;
+  font-family: Verdana;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 34px;
+  margin: 6px 6px 6px 6px;
+}
+
+.option-dropdown a:hover {
+  background-color: var(--light-gray-color);
 }

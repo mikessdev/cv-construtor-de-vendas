@@ -1,36 +1,36 @@
-const toggleDropdown = (dropDown) => {
-    const dropdownContent = document.getElementById(dropDown);
+const toggleDropdown = (dropDown, dropdownContent) => {
+    const dropdownContentContainer = document.getElementById(dropdownContent);
 
-    return dropdownContent.style.display = dropdownContent.style.display ===  "block" ?  "none" : "block";
+    dropdownContentContainer.style.display = dropdownContentContainer.style.display ===  "block" ?  "none" : "block";
+    eventClickOut(dropDown, dropdownContent)
   }
 
 
-const selectItem = (dropDown, button, element) => {
-  toggleDropdown(dropDown);
+const selectItem = (dropdownContent, button, element) => {
+  closeDropdown(dropdownContent);
   const ButtonText = document.getElementById(button);
-  return ButtonText.textContent = element.textContent
+  return ButtonText.textContent = element.textContent;
 }
 
-const closeDropdown = (dropDown) => {
-  dropDown.style.display = "none";
+const closeDropdown = (dropdownContent) => {
+  const dropdown = document.getElementById(dropdownContent)
+  dropdown.style.display = "none";
 }
 
-//events
+
+const eventClickOut = (dropDown, dropdownContent) => {
 document.addEventListener("click", function(event) {
 
-const dropdowns = document.getElementsByClassName('dropDown');
+  const dropDownContainer = document.getElementById(dropDown);
+  if(dropDownContainer){
+    const dropdownContentContainer = document.getElementById(dropdownContent);
+    const clickedOut = !dropDownContainer.contains(event.target);
+    const dropDownIsOpen = dropdownContentContainer.style.display === "block";
 
-  for (let index in dropdowns) {
-      let dropdown = document.getElementsByClassName('dropDown')[index];
-
-      let dropdownContent = document.getElementsByClassName('dropDown-content-event')[index];
-
-      let clickedOut = !dropdown.contains(event.target);
-
-      const dropDownIsOpen = dropdownContent.style.display === "block";
-      if (clickedOut && dropDownIsOpen) {
-        closeDropdown(dropdownContent)
-      }
+    if (clickedOut && dropDownIsOpen) {
+      return closeDropdown(dropdownContent)
+    }
   }
 
 });
+}

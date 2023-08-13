@@ -21,6 +21,7 @@ function closeDropdown(dropdownContent) {
 
 function eventClickOut(dropDown, dropdownContent) {
 document.addEventListener("click", (event) =>  {
+  event.preventDefault();
   const dropDownContainer = document.getElementById(dropDown);
 
     const dropdownContentContainer = document.getElementById(dropdownContent);

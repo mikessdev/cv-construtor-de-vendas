@@ -19,14 +19,16 @@
     <aside>
         <section id="aside-top-container">
             <div>
-                <h1 class="title title-color">Varandas do Garcia</h1>
+                <h1 class="title title-color">
+                    Varandas do Garcia
+                </h1>
                 <span>
                     1321 Unidade Disponível
                 </span>
             </div>
-            <div id="dropDown-btn" class="dropDown">
-                <Button class="info-dropdown-btn"
-                    onclick="toggleDropdown('dropDown-btn', 'dropdownContent')">Informações
+            <div class="dropDown" id="dropDown-btn">
+                <Button class="info-dropdown-btn" onclick="toggleDropdown('dropDown-btn', 'dropdownContent')">
+                    Informações
                     <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow">
                 </Button>
                 <div class="dropdown-content" id="dropdownContent">
@@ -167,16 +169,21 @@
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a href="#" 
-                    onclick="sortTable(sortByLowestPrice, 'main-dropdown-content', 'sort-by-text', this)"
-                    >Menor Valor</a>
-                    <a href="#" 
-                    onclick="sortTable(sortByHighestPrice, 'main-dropdown-content', 'sort-by-text', this)" 
-                    >Maior Valor</a>
-                    <a href="#" onclick="sortTable(sortByBlock, 'main-dropdown-content', 'sort-by-text', this)">Bloco</a>
-                    <a href="#"  onclick="sortTable(sortByRooms, 'main-dropdown-content', 'sort-by-text', this)">QTD. Quartos</a>
-                    <a href="#" onclick="sortTable(sortByFloor, 'main-dropdown-content', 'sort-by-text', this)">Andar</a>
-                    <a href="#" onclick="sortTable(sortByTotalArea, 'main-dropdown-content', 'sort-by-text', this)">Área total</a>
+                    <a href="#"
+                        onclick="sortTable(sortByLowestPrice, 'main-dropdown-content', 'sort-by-text', this)">Menor
+                        Valor</a>
+                    <a href="#"
+                        onclick="sortTable(sortByHighestPrice, 'main-dropdown-content', 'sort-by-text', this)">Maior
+                        Valor</a>
+                    <a href="#"
+                        onclick="sortTable(sortByBlock, 'main-dropdown-content', 'sort-by-text', this)">Bloco</a>
+                    <a href="#" onclick="sortTable(sortByRooms, 'main-dropdown-content', 'sort-by-text', this)">QTD.
+                        Quartos</a>
+                    <a href="#"
+                        onclick="sortTable(sortByFloor, 'main-dropdown-content', 'sort-by-text', this)">Andar</a>
+                    <a href="#" onclick="sortTable(sortByTotalArea, 'main-dropdown-content', 'sort-by-text', this)">Área
+                        total</a>
+                    <a href="#" onclick="sortTable(sortByStatus, 'main-dropdown-content', 'sort-by-text', this)">Estado</a>
                 </div>
             </div>
 

@@ -142,6 +142,20 @@ function sortByBlock(a, b) {
     return enterpriseUnits.indexOf(a) - enterpriseUnits.indexOf(b);
 }
 
+function sortByStatus(a, b) {
+    const blockA = a.status.toLowerCase();
+    const blockB = b.status.toLowerCase();
+  
+    if (blockA < blockB) {
+      return -1;
+    }
+    if (blockA > blockB) {
+      return 1;
+    }
+    
+    return enterpriseUnits.indexOf(a) - enterpriseUnits.indexOf(b);
+}
+
 function sortByRooms(a, b) {
     return  parseInt(b.numberRooms) - parseInt(a.numberRooms);
 }

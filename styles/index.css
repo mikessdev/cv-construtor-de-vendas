@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     border: none;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: 'Verdana', sans-serif;
@@ -9,21 +10,23 @@
 
 :root {
     /*================ Colors ================*/
-    --white-color: #FFFFFF;
     --black-color: #333333;
+
+    --white-color: #FFFFFF;
+
     --light-gray-color: #F5F5F5;
     --light-2-gray-color: #E7E7E7;
     --fog-gray-color: #DDDDDD;
     --default-gray-color: #666;
     --dark-gray-color: #999;
-    --light-green-color: #409A75;
-    --default-green-color: #51A351;
-
+    
     --default-red-color: #EC5D59;
     --default-orange-color: #F89406;
-    --default-green-color: #51A351;
-    --dark-green-color: #2E6E66;
 
+    --dark-green-color: #2E6E66;
+    --light-green-color: #409A75;
+    --default-green-color: #51A351;
+    
 
 
 
@@ -56,7 +59,6 @@
 
 @media (max-width: 680px) {
     body {
-        display: flex;
         flex-direction: column;
     }
 }

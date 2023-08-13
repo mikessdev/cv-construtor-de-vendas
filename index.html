@@ -167,12 +167,16 @@
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a id="first-option" href="#"
-                        onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Menor Valor</a>
-                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Bloco</a>
-                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">QTD. Quartos</a>
-                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Andar</a>
-                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Área total</a>
+                    <a href="#" 
+                    onclick="sortTable(sortByLowestPrice, 'main-dropdown-content', 'sort-by-text', this)"
+                    >Menor Valor</a>
+                    <a href="#" 
+                    onclick="sortTable(sortByHighestPrice, 'main-dropdown-content', 'sort-by-text', this)" 
+                    >Maior Valor</a>
+                    <a href="#" onclick="sortTable(sortByBlock, 'main-dropdown-content', 'sort-by-text', this)">Bloco</a>
+                    <a href="#"  onclick="sortTable(sortByRooms, 'main-dropdown-content', 'sort-by-text', this)">QTD. Quartos</a>
+                    <a href="#" onclick="sortTable(sortByFloor, 'main-dropdown-content', 'sort-by-text', this)">Andar</a>
+                    <a href="#" onclick="sortTable(sortByTotalArea, 'main-dropdown-content', 'sort-by-text', this)">Área total</a>
                 </div>
             </div>
 

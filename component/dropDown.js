@@ -1,25 +1,25 @@
 //TODO: Fechar eventListener
 
-const toggleDropdown = (dropDown, dropdownContent) => {
+function toggleDropdown(dropDown, dropdownContent) {
     const dropdownContentContainer = document.getElementById(dropdownContent);
     dropdownContentContainer.style.display = dropdownContentContainer.style.display ===  "block" ?  "none" : "block";
     eventClickOut(dropDown, dropdownContent)
   }
 
 
-const selectItem = (dropdownContent, button, element) => {
+function selectItem(dropdownContent, button, element) {
   closeDropdown(dropdownContent);
   const ButtonText = document.getElementById(button);
   return ButtonText.textContent = element.textContent;
 }
 
-const closeDropdown = (dropdownContent) => {
+function closeDropdown(dropdownContent) {
   const dropdown = document.getElementById(dropdownContent)
   dropdown.style.display = "none";
 }
 
 
-const eventClickOut = (dropDown, dropdownContent) => {
+function eventClickOut(dropDown, dropdownContent) {
 document.addEventListener("click", (event) =>  {
   const dropDownContainer = document.getElementById(dropDown);
 
@@ -31,8 +31,4 @@ document.addEventListener("click", (event) =>  {
        closeDropdown(dropdownContent)
       }
 });
-}
-
-const injectElement = () => {
-  alert('iunjetando')
 }

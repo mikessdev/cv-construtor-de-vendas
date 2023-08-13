@@ -12,6 +12,13 @@ aside {
     }
 }
 
+@media (max-width: 380px) {
+    aside {
+        padding: 20px 4px;
+        height: 100%;
+    }
+}
+
 #aside-top-container {
     display: flex;
     justify-content: space-between;

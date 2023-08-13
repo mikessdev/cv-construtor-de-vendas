@@ -28,6 +28,29 @@ main {
 }
 
 #main-dropdown span {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+/*================ media queries ================*/
+
+@media (max-width: 680px) {
+    main {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #main-title {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+    #sort-by {
+        text-align: right;
+        max-width: 90px;
+    }
+
 }

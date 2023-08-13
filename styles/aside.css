@@ -1,8 +1,15 @@
 aside {
     font-family: Verdana;
     background-color: var(--light-gray-color);
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     height: 100vh;
+}
+
+@media (max-width: 680px) {
+    aside {
+        padding: 20px 10px;
+        height: 100%;
+    }
 }
 
 #aside-top-container {

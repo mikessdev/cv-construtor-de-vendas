@@ -1,0 +1,62 @@
+table {
+    border-spacing: 0 10px;
+}
+
+@media (min-width: 680px) {
+    table {
+        overflow-x: auto;
+    }
+}
+
+.table-title {
+    color: var(--default-gray-colo);
+    font-size: var(--high-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-bottom: 10px;
+
+}
+
+.row-content {
+    color: var(--black-colo);
+    font-family: Verdana;
+    font-size: var(--high-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--light-gray-color);
+    margin-bottom: 10px;
+}
+
+.first-row {
+    border-radius: var(--default-radius) 0 0 var(--default-radius);
+}
+
+.vertical-dashed-line {
+    border-right: 1px dashed var(--fog-gray-color);
+}
+
+.last-row {
+    border-radius: 0  var(--default-radius) var(--default-radius) 0;
+}
+
+.status-available {
+    background-color:  var(--default-green-color);
+}
+
+.status-reserved {
+    background-color:  var(--default-orange-color);
+}
+
+.status-sold {
+    background-color:  var(--default-red-color);
+}

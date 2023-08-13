@@ -32,3 +32,7 @@ document.addEventListener("click", (event) =>  {
       }
 });
 }
+
+const injectElement = () => {
+  alert('iunjetando')
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="component/dropDown.css">
     <link rel="stylesheet" href="styles/card.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/table.css">
     <title>CV - Construtor de Vendas</title>
 </head>
 
@@ -166,8 +167,10 @@
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a href="#"  onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Bloco</a>
-                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Quartos</a>
+                    <a id="first-option" href="#"
+                        onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Menor Valor</a>
+                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Bloco</a>
+                    <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">QTD. Quartos</a>
                     <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Andar</a>
                     <a href="#" onclick="selectItem('main-dropdown-content', 'sort-by-text', this)">Área total</a>
                 </div>
@@ -176,10 +179,26 @@
         </header>
 
         <div class="dashed-line"></div>
+        <table>
+            <thead>
+                <tr id="first-column-table">
+                    <td class="table-title">Bloco</td>
+                    <td class="table-title">QTD. quartos</td>
+                    <td class="table-title">Andar</td>
+                    <td class="table-title">Área Total</td>
+                    <td class="table-title">Coluna</td>
+                    <td class="table-title">Estado</td>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
 
     </main>
 
     <script src="index.js"></script>
+    <script src="fillTable.js"></script>
     <script src="component/dropDown.js"></script>
 </body>
 

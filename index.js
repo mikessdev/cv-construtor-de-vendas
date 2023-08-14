@@ -49,7 +49,7 @@ reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length
 updateText('enterprise-reserved', reservedUnits);
 
 //Filtrar Disponibilidade
-let newSortedArray = enterpriseUnits;
+let newFilteredArray = enterpriseUnits;
 
 function getFiltersParams() {
     const stageParams = document.getElementById('stage-params').textContent;
@@ -92,59 +92,59 @@ function filterValidation(parameters) {
 };
 
 function filter(parameters) {
-    newSortedArray = [];
+    newFilteredArray = [];
 
     if(parameters.stage && !parameters.block && !parameters.status) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.stage === parameters.stage;
         })
     };
 
     if(parameters.block && !parameters.stage && !parameters.status) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.block === parameters.block;
         })
     };
 
     if(parameters.status && !parameters.block && !parameters.stage) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.status === parameters.status;
         })
     };
 
     if(parameters.stage && parameters.block && !parameters.status) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.stage === parameters.stage && 
                    e.block === parameters.block;
         })
     };
 
     if(parameters.status && parameters.block && !parameters.stage) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.status === parameters.status && 
                    e.block === parameters.block;
         })
     };
 
     if(parameters.status && parameters.stage && !parameters.block ) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.status === parameters.status && 
                    e.stage === parameters.stage;
         })
     };
 
     if(parameters.status && parameters.stage && parameters.block ) {
-        newSortedArray = enterpriseUnits.filter(e => {
+        newFilteredArray = enterpriseUnits.filter(e => {
             return e.status === parameters.status && 
                    e.stage === parameters.stage && 
                    e.block === parameters.block;
         })
     };
 
-    console.table(newSortedArray);
+    console.table(newFilteredArray);
 
-    if(newSortedArray.length > 0) {
-        createNewTable(newSortedArray);
+    if(newFilteredArray.length > 0) {
+        createNewTable(newFilteredArray);
     } else {
         alert('Nenhum item encontrado com esses parametros');
         createNewTable([]);
@@ -157,11 +157,11 @@ function cleanTable(table) {
       }
 };
 
-function createNewTable(newSortedArray) {
+function createNewTable(newTableData) {
     const table = document.getElementById('table-body');
     cleanTable(table);
 
-    newSortedArray.forEach(element => {
+    newTableData.forEach(element => {
         let tr = document.createElement("tr");
 
         let tableRow = `
@@ -222,49 +222,31 @@ function showElement(elementID) {
     return document.getElementById(elementID).style.display = 'block';
 }
 
-function sortByLowestValue(a, b) {
+function sortByLowestValue(dropdownContent, button, element) {
+    selectItem(dropdownContent, button, element);
+
     hideElement('sorted-by-lowest');
     showElement('sorted-by-highest');
 
-    return  parseInt(b.price) - parseInt(a.price);
+    const newSortedArray = newFilteredArray.sort((a, b) => {
+        return  parseInt(a.price) - parseInt(b.price);
+    });
+    console.table(newSortedArray);
+    createNewTable(newSortedArray);
 }
 
-function sortByHighestValue(a, b) {
+function sortByHighestValue(dropdownContent, button, element) {
+    selectItem(dropdownContent, button, element);
+
     hideElement('sorted-by-highest');
     showElement('sorted-by-lowest');
 
-    return  parseInt(a.price) - parseInt(b.price);
+    const newSortedArray = newFilteredArray.sort((a, b) => {
+        return  parseInt(b.price) - parseInt(a.price);
+    });
+    console.table(newSortedArray);
+    createNewTable(newSortedArray);
 }
 
-function sortBy(sortedMethod) {
-
-}
-
-function sortTable(sortedMethod, dropdownContent, button, element){
-    const table = document.getElementById('table-body');
-
-    selectItem(dropdownContent, button, element);
-
-    const newSortedArray = enterpriseUnits.sort(sortedMethod);
-
-    while (table.firstChild) {
-        table.removeChild(table.firstChild);
-      }
-
-    for (let element of newSortedArray) {
-        let tr = document.createElement("tr");
-        let tableRow = `
-        <td class="row-content , first-row , vertical-dashed-line">${element.block} </td>
-        <td class="row-content , vertical-dashed-line">${element.numberRooms} </td>
-        <td class="row-content , vertical-dashed-line">${element.floor} </td>
-        <td class="row-content , vertical-dashed-line">${element.totalArea} </td>
-        <td class="row-content">${element.column} </td>
-        <td class="row-content , last-row , ${defineStatusClass(element.status)}">${element.status} </td>`;
-    
-        table.appendChild(tr);
-        tr.innerHTML = tableRow;
-    }
-};
-
-// Criando Tabela ao abrir o site
+// Criando Tabela ao abrir o site pela primeira vez
 createNewTable(enterpriseUnits);

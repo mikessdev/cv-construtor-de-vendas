@@ -163,7 +163,7 @@
         </section>
     </aside>
     <main>
-        <header class="title" id="main-header">
+        <header class="title , main-header" id="main-header">
             <p id="main-title">Unidades do empreendimento</p>
             <div id="main-dropdown">
                 <span onclick="toggleDropdown('main-dropdown', 'main-dropdown-content')">
@@ -172,10 +172,10 @@
                 </span>
                 <div id="main-dropdown-content">
                     <a id="sorted-by-lowest" href="#"
-                        onclick="sortTable(sortByLowestValue, 'main-dropdown-content', 'sort-by-text', this)">Menor
+                        onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">Menor
                         Valor</a>
                     <a id="sorted-by-highest" href="#"
-                        onclick="sortTable(sortByHighestValue, 'main-dropdown-content', 'sort-by-text', this)">Maior
+                        onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">Maior
                         Valor</a>
                 </div>
             </div>

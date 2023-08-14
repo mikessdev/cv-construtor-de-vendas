@@ -57,10 +57,10 @@ function getFiltersParams() {
     const statusParams = document.getElementById('status-params').textContent;
 
     const parameters = {
-        stage: stageParams,
-        block: blockParams,
-        status: statusParams}
-    
+        stage: stageParams.replace(/\n/g, "").trim(),
+        block: blockParams.replace(/\n/g, "").trim(),
+        status: statusParams.replace(/\n/g, "").trim()};
+
     const validatedParameter = filterValidation(parameters);
 
     if(validatedParameter) {
@@ -140,8 +140,6 @@ function filter(parameters) {
                    e.block === parameters.block;
         })
     };
-
-    console.table(newFilteredArray);
 
     if(newFilteredArray.length > 0) {
         createNewTable(newFilteredArray);

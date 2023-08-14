@@ -8,6 +8,10 @@
     font-family: 'Verdana', sans-serif;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 :root {
     /*================ Colors ================*/
     --black-color: #333333;
@@ -31,37 +35,40 @@
 
 
     /*================ Font sizes ================*/
-    --high-size: 10px;
-    --medium-size: 8px;
+    --high-size: 1rem;  /*10px*/
+    --medium-size: 0.8rem;  /*8px*/
 
     /*================ Border radius ================*/
     --default-radius: 4px;
     --high-radius: 40px;
 }
 
-/*================ Template ================*/
+/*================ Template grid ================*/
 
-@media (min-width: 680px) {
-    body {
-        display: flex;
-
-    }
-
-    main {
-        width: 66%;
-    }
-
-    aside {
-        width: 33%;
-    }
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 @media (max-width: 680px) {
     body {
-        flex-direction: column;
-    }
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
 }
 
+@media (max-width: 320px) {
+   body {
+    display: flex;
+    flex-direction: column;
+   }
+}
 
 /*================ Text styles ================*/
 .title {

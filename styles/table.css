@@ -1,5 +1,12 @@
+@media (max-width: 320px) {
+    .table-container {
+     overflow-x: auto;
+    }
+ }
+
 table {
     border-spacing: 0 10px;
+    width: 100%;
 }
 
 .table-title {
@@ -20,6 +27,28 @@ table {
     display: none;
 }
 
+.row-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--light-gray-color);
+}
+
+.row-content1 {
+    color: var(--black-colo);
+    font-family: Verdana;
+    font-size: var(--high-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    vertical-align: baseline;
+}
+
 .row-content {
     color: var(--black-colo);
     font-family: Verdana;
@@ -29,13 +58,12 @@ table {
     line-height: normal;
     text-transform: uppercase;
     text-align: center;
-
-    padding-top: 16px;
-    padding-bottom: 16px;
-    background-color: var(--light-gray-color);
-    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+   
     vertical-align: baseline;
 }
+
 
 .first-row {
     border-radius: var(--default-radius) 0 0 var(--default-radius);
@@ -47,6 +75,7 @@ table {
 
 .last-row {
     border-radius: 0  var(--default-radius) var(--default-radius) 0;
+    color: var(--white-color);
 }
 
 .status-available {

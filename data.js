@@ -185,5 +185,5 @@ let enterpriseUnits = [
         column: '16',
         status: 'Vendida',
         price: '468.000,00'
-    }
+    },
 ];

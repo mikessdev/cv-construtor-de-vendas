@@ -165,23 +165,35 @@ function createNewTable(newSortedArray) {
         let tr = document.createElement("tr");
 
         let tableRow = `
-        <td class="row-content , first-row , vertical-dashed-line">
-            ${element.block} 
+        <td class="row-container , first-row">
+            <div class="row-content1 , vertical-dashed-line">
+                ${element.block} 
+            </div>
         </td>
-        <td class="row-content , vertical-dashed-line">
-            ${element.numberRooms} 
+        <td class="row-container">
+            <div class="row-content1 , vertical-dashed-line">
+                ${element.numberRooms} 
+            </div>
         </td>
-        <td class="row-content , vertical-dashed-line">
-            ${element.floor} 
+        <td class="row-container">
+            <div class="row-content1 , vertical-dashed-line">
+                ${element.floor} 
+            </div>
         </td>
-        <td class="row-content , vertical-dashed-line">
-            ${element.totalArea} 
+        <td class="row-container">
+            <div class="row-content1 , vertical-dashed-line">
+                ${element.totalArea} 
+            </div>
         </td>
-        <td class="row-content">
+        <td class="row-container">
+            <div class="row-content1">
             ${element.column} 
+            </div>
         </td>
-        <td class="row-content , last-row , ${defineStatusClass(element.status)}">
+        <td class="row-container , last-row , ${defineStatusClass(element.status)}">
+            <div class="row-content1">
             ${element.status} 
+            </div>
         </td>`;
     
         table.appendChild(tr);

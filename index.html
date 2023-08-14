@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <aside>
         <section id="aside-top-container">
             <div>
@@ -62,8 +61,7 @@
                     <div class='card-elipse' id="elipse-blocked">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color"
-                        id="enterprise-blocked">
+                        <span class="title title-variant-color" id="enterprise-blocked">
                             0
                         </span>
                         <span class="sub-title">
@@ -75,8 +73,7 @@
                     <div class='card-elipse' id="elipse-sold">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color"
-                        id="enterprise-sold">
+                        <span class="title title-variant-color" id="enterprise-sold">
                             0
                         </span>
                         <span class="sub-title">
@@ -89,8 +86,7 @@
                     <div class='card-elipse' id="elipse-reserved">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color"
-                        id="enterprise-reserved">
+                        <span class="title title-variant-color" id="enterprise-reserved">
                             0
                         </span>
                         <span class="sub-title">
@@ -102,8 +98,7 @@
                     <div class='card-elipse' id="elipse-available">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color"
-                        id="enterprise-available">
+                        <span class="title title-variant-color" id="enterprise-available">
                             1321
                         </span>
                         <span class="sub-title">
@@ -134,7 +129,8 @@
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-02">
                 <Button class="filter-select-btn"
-                    onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span id="block-params">Escolha a quadra</span>
+                    onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span id="block-params">Escolha
+                        a quadra</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
@@ -187,22 +183,24 @@
         </header>
 
         <div class="dashed-line"></div>
-        <table>
-            <thead>
-                <tr id="first-column-table">
-                    <td class="table-title">Bloco</td>
-                    <td class="table-title">QTD. quartos</td>
-                    <td class="table-title">Andar</td>
-                    <td class="table-title">Área Total</td>
-                    <td class="table-title">Coluna</td>
-                    <td class="table-title">Estado</td>
-                </tr>
-            </thead>
-            <tbody id="table-body">
+        <div class="table-container">
 
-            </tbody>
-        </table>
+            <table>
+                <thead>
+                    <tr id="first-column-table">
+                        <td class="table-title">Bloco</td>
+                        <td class="table-title">QTD. quartos</td>
+                        <td class="table-title">Andar</td>
+                        <td class="table-title">Área Total</td>
+                        <td class="table-title">Coluna</td>
+                        <td class="table-title">Estado</td>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
 
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <script src="data.js"></script>

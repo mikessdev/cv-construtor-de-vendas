@@ -128,7 +128,6 @@
 }
 
 #main-dropdown-content a {
-  display: block;
   color: var(--default-gray-color);
   text-decoration: none;
   font-size: var(--high-size);

@@ -77,7 +77,7 @@ aside {
 
 #percentage-bar-container #bar-container #bar-indicator {
     background: linear-gradient(90deg, #FC9C33 49.57%, #1D8F21 100%);
-    width: 75%;
+    width: 0%;
     height: 7px;
     border-radius: var(--high-radius);
 }

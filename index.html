@@ -46,7 +46,7 @@
                     <img src="assets/icons/trophy.svg">
                     <span class="sub-title">Status de venda</span>
                 </div>
-                <span id="percentage">75.23%</span>
+                <span id="percentage">00.00%</span>
             </div>
             <div id="bar-container">
                 <div id="bar-indicator">
@@ -119,48 +119,51 @@
             <h3 class="title title-color filte-title">Filtrar disponibilidade</h3>
             <div class="filter-container , dropDown" id="filter-dropDown-01">
                 <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
-                    <span id="btn-01">Escolha a etapa</span>
+                    <span id="stage-params">Escolha a etapa</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-01">
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 01</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 02</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'btn-01', this)">Opção 03</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 1</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 2</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 3</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 4</a>
                     </div>
 
                 </div>
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-02">
                 <Button class="filter-select-btn"
-                    onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span id="btn-02">Escolha a
+                    onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')"><span id="block-params">Escolha a
                         quadra</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-02">
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 01</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 02</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'btn-02', this)">Opção 03</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Arraial do cabo</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Carneiros</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Trancoso</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Maragogi</a>
                     </div>
 
                 </div>
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-03">
                 <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
-                    <span id="btn-03">Situação</span>
+                    <span id="status-params">Situação</span>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-03">
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 01</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 02</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'btn-03', this)">Opção 03</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Bloqueada</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Vendida</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Reservada</a>
+                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Disponível</a>
                     </div>
 
                 </div>
             </div>
-            <button id="filter-btn" type="submit" onclick="getFiltersValue()">Filtrar disponibilidade</button>
+            <button id="filter-btn" type="submit" onclick="getFiltersParams()">Filtrar disponibilidade</button>
 
         </section>
     </aside>
@@ -173,21 +176,12 @@
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a href="#"
-                        onclick="sortTable(sortByLowestPrice, 'main-dropdown-content', 'sort-by-text', this)">Menor
+                    <a id="sorted-by-lowest" href="#"
+                        onclick="sortTable(sortByLowestValue, 'main-dropdown-content', 'sort-by-text', this)">Menor
                         Valor</a>
-                    <a href="#"
-                        onclick="sortTable(sortByHighestPrice, 'main-dropdown-content', 'sort-by-text', this)">Maior
+                    <a id="sorted-by-highest" href="#"
+                        onclick="sortTable(sortByHighestValue, 'main-dropdown-content', 'sort-by-text', this)">Maior
                         Valor</a>
-                    <a href="#"
-                        onclick="sortTable(sortByBlock, 'main-dropdown-content', 'sort-by-text', this)">Bloco</a>
-                    <a href="#" onclick="sortTable(sortByRooms, 'main-dropdown-content', 'sort-by-text', this)">QTD.
-                        Quartos</a>
-                    <a href="#"
-                        onclick="sortTable(sortByFloor, 'main-dropdown-content', 'sort-by-text', this)">Andar</a>
-                    <a href="#" onclick="sortTable(sortByTotalArea, 'main-dropdown-content', 'sort-by-text', this)">Área
-                        total</a>
-                    <a href="#" onclick="sortTable(sortByStatus, 'main-dropdown-content', 'sort-by-text', this)">Estado</a>
                 </div>
             </div>
 
@@ -214,7 +208,6 @@
 
     <script src="data.js"></script>
     <script src="index.js"></script>
-    <script src="table.js"></script>
     <script src="component/dropDown.js"></script>
 </body>
 

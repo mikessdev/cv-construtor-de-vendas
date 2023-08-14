@@ -16,6 +16,10 @@ table {
 
 }
 
+#sorted-by-lowest {
+    display: none;
+}
+
 .row-content {
     color: var(--black-colo);
     font-family: Verdana;
@@ -55,4 +59,8 @@ table {
 
 .status-sold {
     background-color:  var(--default-red-color);
+}
+
+.status-blocked {
+    background-color:  var(--dark-gray-color);
 }

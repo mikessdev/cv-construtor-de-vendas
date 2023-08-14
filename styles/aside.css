@@ -207,20 +207,13 @@ aside {
 
 .option-dropdown a {
     display: block;
-    font-size: var(--high-size);
     padding: 0 14px 0 14px;
     border-radius: var(--default-radius);
-
-    color: var(--default-gray-color);
-    font-family: Verdana;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     margin: 6px 6px 6px 6px;
 }
 
 .option-dropdown a:hover {
-    background-color: var(--light-gray-color);
+    background-color: var(--white-02-color);
 }
 
 
@@ -230,7 +223,7 @@ aside {
 
 #filter-btn {
     margin-top: 10px;
-    background-color: var(--dark-green-color);
+    background-color: var(--green-03-color);
     width: 100%;
     border-radius: var(--default-radius);
     padding: 12px 0 12px 0;

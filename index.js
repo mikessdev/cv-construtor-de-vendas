@@ -49,14 +49,9 @@ reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length
 updateText('enterprise-reserved', reservedUnits);
 
 //Filtrar Disponibilidade
+let newSortedArray = enterpriseUnits;
 
 function getFiltersParams() {
-    const noParams = {
-        stage: 'Escolha a etapa',
-        block: 'Escolha a quadra',
-        status: 'Situação'
-    }
-
     const stageParams = document.getElementById('stage-params').textContent;
     const blockParams = document.getElementById('block-params').textContent;
     const statusParams = document.getElementById('status-params').textContent;
@@ -65,24 +60,95 @@ function getFiltersParams() {
         stage: stageParams,
         block: blockParams,
         status: statusParams}
-     
-    parameters.stage === noParams.stage ||
-    parameters.block === noParams.block ||
-    parameters.status === noParams.status ? 
-    alert('Defina os Parametros de Filtragem') :
-    filter(parameters);
+    
+    const validatedParameter = filterValidation(parameters);
+
+    if(validatedParameter) {
+        filter(validatedParameter);    
+    }
 }
 
-function filter(parameters) {
-    const newSortedArray = enterpriseUnits.filter(e => {
-        return e.stage === parameters.stage && 
-        e.block === parameters.block && 
-        e.status === parameters.status;
-    })
+function filterValidation(parameters) {
+    const noParams = {
+        stage: 'Escolha a etapa',
+        block: 'Escolha a quadra',
+        status: 'Situação'
+    }
 
-    newSortedArray.length > 0 ? 
-    createNewTable(newSortedArray) : 
-    alert('Nenhum item encontrados com esses parametros');
+    let validatedParameter = {
+        stage: '',
+        block: '',
+        status: ''}
+
+    validatedParameter.stage = parameters.stage === noParams.stage ?  null : parameters.stage;
+    validatedParameter.block = parameters.block === noParams.block ? null : parameters.block;
+    validatedParameter.status = parameters.status === noParams.status ? null : parameters.status;
+
+    return parameters.stage === noParams.stage && 
+    parameters.block === noParams.block && 
+    parameters.status === noParams.status ?
+    alert('Defina pelo menos um parametro de filtragem') :
+    validatedParameter;
+};
+
+function filter(parameters) {
+    newSortedArray = [];
+
+    if(parameters.stage && !parameters.block && !parameters.status) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.stage === parameters.stage;
+        })
+    };
+
+    if(parameters.block && !parameters.stage && !parameters.status) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.block === parameters.block;
+        })
+    };
+
+    if(parameters.status && !parameters.block && !parameters.stage) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.status === parameters.status;
+        })
+    };
+
+    if(parameters.stage && parameters.block && !parameters.status) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.stage === parameters.stage && 
+                   e.block === parameters.block;
+        })
+    };
+
+    if(parameters.status && parameters.block && !parameters.stage) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.status === parameters.status && 
+                   e.block === parameters.block;
+        })
+    };
+
+    if(parameters.status && parameters.stage && !parameters.block ) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.status === parameters.status && 
+                   e.stage === parameters.stage;
+        })
+    };
+
+    if(parameters.status && parameters.stage && parameters.block ) {
+        newSortedArray = enterpriseUnits.filter(e => {
+            return e.status === parameters.status && 
+                   e.stage === parameters.stage && 
+                   e.block === parameters.block;
+        })
+    };
+
+    console.table(newSortedArray);
+
+    if(newSortedArray.length > 0) {
+        createNewTable(newSortedArray);
+    } else {
+        alert('Nenhum item encontrado com esses parametros');
+        createNewTable([]);
+    };
 };
 
 function cleanTable(table) {
@@ -133,7 +199,7 @@ function defineStatusClass(elementStatus) {
     if(elementStatus === status.reserved) return reserved;
     if(elementStatus === status.sold) return sold;
     if(elementStatus === status.blocked) return blocked;
-}
+};
 
 // Ordenar Por Maior ou Menor Valor
 function hideElement(elementID) {
@@ -158,9 +224,12 @@ function sortByHighestValue(a, b) {
     return  parseInt(a.price) - parseInt(b.price);
 }
 
+function sortBy(sortedMethod) {
+
+}
+
 function sortTable(sortedMethod, dropdownContent, button, element){
     const table = document.getElementById('table-body');
-
 
     selectItem(dropdownContent, button, element);
 
@@ -183,7 +252,7 @@ function sortTable(sortedMethod, dropdownContent, button, element){
         table.appendChild(tr);
         tr.innerHTML = tableRow;
     }
-}
+};
 
 // Criando Tabela ao abrir o site
 createNewTable(enterpriseUnits);

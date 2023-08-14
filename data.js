@@ -120,4 +120,70 @@ let enterpriseUnits = [
         status: 'Bloqueada',
         price: '298.000,00'
     },
+    {   
+        id: '12',
+        stage: 'Etapa 1',
+        block: 'Trancoso',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Disponível',
+        price: '298.000,00'
+    },
+    {   
+        id: '13',
+        stage: 'Etapa 1',
+        block: 'Trancoso',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Reservada',
+        price: '299.000,00'
+    },
+    {   
+        id: '14',
+        stage: 'Etapa 1',
+        block: 'Trancoso',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Bloqueada',
+        price: '268.000,00'
+    },
+    {   
+        id: '15',
+        stage: 'Etapa 1',
+        block: 'Trancoso',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '368.000,00'
+    },
+    {   
+        id: '16',
+        stage: 'Etapa 1',
+        block: 'Arraial do cabo',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '368.000,00'
+    },
+    {   
+        id: '17',
+        stage: 'Etapa 1',
+        block: 'Arraial do cabo',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '468.000,00'
+    }
 ];

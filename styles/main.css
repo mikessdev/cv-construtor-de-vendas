@@ -1,7 +1,10 @@
+
+
 main {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    width: 100%;
     background-color: var(--white-color);
 }
 

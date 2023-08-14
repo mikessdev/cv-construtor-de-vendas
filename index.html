@@ -18,23 +18,24 @@
     <aside>
         <section id="aside-top-container">
             <div>
-                <h1 class="title title-color">
+                <h1 class="text-variant-01 black-color">
                     Varandas do Garcia
                 </h1>
-                <span id="available-units">
+                <p id="available-units" class="text-variant-02 gray-01-color">
                     1321 Unidade Disponível
-                </span>
+                </p>
             </div>
             <div class="dropDown" id="dropDown-btn">
-                <Button class="info-dropdown-btn" onclick="toggleDropdown('dropDown-btn', 'dropdownContent')">
+                <Button class="info-dropdown-btn text-variant-03 white-color"
+                    onclick="clickDropdown('dropDown-btn', 'dropdownContent')">
                     Informações
                     <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow">
                 </Button>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="#">Tabela de Preços</a>
-                    <a href="#">Valores dos Espaços</a>
-                    <a href="#">Arquivos do empreendimento</a>
-                    <a href="#">Materiais de Campanha</a>
+                <div class="dropdown-content " id="dropdownContent">
+                    <a class="text-variant-04 black-color" href="#">Tabela de Preços</a>
+                    <a class="text-variant-04 black-color" href="#">Valores dos Espaços</a>
+                    <a class="text-variant-04 black-color" href="#">Arquivos do empreendimento</a>
+                    <a class="text-variant-04 black-color" href="#">Materiais de Campanha</a>
                 </div>
             </div>
         </section>
@@ -43,9 +44,9 @@
             <div id="percentage-bar-header-container">
                 <div id="percentage-bar-text-container">
                     <img src="assets/icons/trophy.svg">
-                    <span class="sub-title">Status de venda</span>
+                    <p class="text-variant-05 black-color">Status de venda</p>
                 </div>
-                <span id="percentage">00.00%</span>
+                <span id="percentage" class="text-variant-05 black-color">00.00%</span>
             </div>
             <div id="bar-container">
                 <div id="bar-indicator">
@@ -54,17 +55,16 @@
         </section>
         <hr class="dashed-line">
         <section>
-            <h3 class="title title-color">Situação do empreendimento</h3>
+            <h3 class="text-variant-01 black-color">Situação do empreendimento</h3>
             <div id="cards-container">
-
                 <div class="card-container">
                     <div class='card-elipse' id="elipse-blocked">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color" id="enterprise-blocked">
+                        <span class="text-variant-01 gray-01-color" id="enterprise-blocked">
                             0
                         </span>
-                        <span class="sub-title">
+                        <span class="text-variant-05 gray-01-color">
                             Bloqueada
                         </span>
                     </div>
@@ -73,10 +73,10 @@
                     <div class='card-elipse' id="elipse-sold">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color" id="enterprise-sold">
+                        <span class="text-variant-01 gray-01-color" id="enterprise-sold">
                             0
                         </span>
-                        <span class="sub-title">
+                        <span class="text-variant-05 gray-01-color">
                             Vendida
                         </span>
                     </div>
@@ -86,10 +86,10 @@
                     <div class='card-elipse' id="elipse-reserved">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color" id="enterprise-reserved">
+                        <span class="text-variant-01 gray-01-color" id="enterprise-reserved">
                             0
                         </span>
-                        <span class="sub-title">
+                        <span class="text-variant-05 gray-01-color">
                             Reservada
                         </span>
                     </div>
@@ -98,10 +98,10 @@
                     <div class='card-elipse' id="elipse-available">
                     </div>
                     <div class='card-content'>
-                        <span class="title title-variant-color" id="enterprise-available">
+                        <span class="text-variant-01 gray-01-color" id="enterprise-available">
                             1321
                         </span>
-                        <span class="sub-title">
+                        <span class="text-variant-05 gray-01-color">
                             Disponível
                         </span>
                     </div>
@@ -113,55 +113,58 @@
         <section>
             <h3 class="title title-color filte-title">Filtrar disponibilidade</h3>
             <div class="filter-container , dropDown" id="filter-dropDown-01">
-                <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
-                    <span id="stage-params">
+                <Button class="filter-select-btn" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
+                    <p id="stage-params" class="text-variant-02 gray-01-color">
                         Escolha a etapa
-                    </span>
+                    </p>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-01">
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 1</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 2</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 3</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-01', 'stage-params', this)">Etapa 4</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-01', 'stage-params', this)">Etapa 1</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-01', 'stage-params', this)">Etapa 2</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-01', 'stage-params', this)">Etapa 3</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-01', 'stage-params', this)">Etapa 4</a>
                     </div>
 
                 </div>
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-02">
-                <Button class="filter-select-btn" onclick=" toggleDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
-                    <span id="block-params">
+                <Button class="filter-select-btn" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
+                    <p id="block-params" class="text-variant-02 gray-01-color">
                         Escolha a quadra
-                    </span>
+                    </p>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-02">
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Arraial do cabo</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Carneiros</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Trancoso</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-02', 'block-params', this)">Maragogi</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-02', 'block-params', this)">Arraial do
+                            cabo</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-02', 'block-params', this)">Carneiros</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-02', 'block-params', this)">Trancoso</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-02', 'block-params', this)">Maragogi</a>
                     </div>
 
                 </div>
             </div>
             <div class="filter-container , dropDown" id="filter-dropDown-03">
-                <Button class="filter-select-btn" onclick="toggleDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
-                    <span id="status-params">Situação</span>
+                <Button class="filter-select-btn" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
+                    <p id="status-params" class="text-variant-02 gray-01-color">Situação</p>
                     <img src="assets/icons/polygonGray.svg" alt="dropdown arrow">
                 </Button>
                 <div class="option-wrapper">
                     <div class="option-dropdown" id="Form-Dropdown-03">
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Bloqueada</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Vendida</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Reservada</a>
-                        <a href="#" onclick="selectItem('Form-Dropdown-03', 'status-params', this)">Disponível</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-03', 'status-params', this)">Bloqueada</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-03', 'status-params', this)">Vendida</a>
+                        <a href="#" onclick="toggleElementText('Form-Dropdown-03', 'status-params', this)">Reservada</a>
+                        <a href="#"
+                            onclick="toggleElementText('Form-Dropdown-03', 'status-params', this)">Disponível</a>
                     </div>
 
                 </div>
             </div>
-            <button id="filter-btn" type="submit" onclick="getFiltersParams()">Filtrar disponibilidade</button>
+            <button id="filter-btn" class="text-variant-03 white-color" type="submit"
+                onclick="getFiltersParams()">Filtrar disponibilidade</button>
 
         </section>
     </aside>
@@ -169,17 +172,24 @@
         <header class="title , main-header" id="main-header">
             <p id="main-title">Unidades do empreendimento</p>
             <div id="main-dropdown">
-                <span onclick="toggleDropdown('main-dropdown', 'main-dropdown-content')">
-                    <p id="sort-by">Ordenar por <strong id="sort-by-text">Menor valor</strong></p>
+                <span onclick="clickDropdown('main-dropdown', 'main-dropdown-content')">
+                    <p id="sort-by">
+                        Ordenar por
+                        <strong id="sort-by-text">
+                            Menor valor
+                        </strong>
+                    </p>
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a id="sorted-by-lowest" href="#"
-                        onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">Menor
-                        Valor</a>
-                    <a id="sorted-by-highest" href="#"
-                        onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">Maior
-                        Valor</a>
+                    <a id="sorted-by-lowest" class="main-dropdown-item" href="#"
+                        onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
+                        Menor Valor
+                    </a>
+                    <a id="sorted-by-highest" class="main-dropdown-item" href="#"
+                        onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">
+                        Maior Valor
+                    </a>
                 </div>
             </div>
 
@@ -187,7 +197,6 @@
 
         <div class="dashed-line"></div>
         <div class="table-container">
-
             <table>
                 <thead>
                     <tr id="first-column-table">
@@ -200,7 +209,6 @@
                     </tr>
                 </thead>
                 <tbody id="table-body">
-
                 </tbody>
             </table>
         </div>
@@ -208,7 +216,6 @@
 
     <script src="data.js"></script>
     <script src="index.js"></script>
-    <script src="component/dropDown.js"></script>
 </body>
 
 </html>

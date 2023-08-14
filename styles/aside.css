@@ -1,6 +1,5 @@
 aside {
-    font-family: Verdana;
-    background-color: var(--light-gray-color);
+    background-color: var(--white-02-color);
     padding: 20px;
 }
 
@@ -29,54 +28,97 @@ aside {
     color: var(--default-gray-color);
 }
 
+/*================ Dropdown btn ================*/
+
+#dropDown-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.info-dropdown-btn {
+    width: 116px;
+    height: 26px;
+    background-color: var(--green-01-color);
+    padding: 7px 14px 7px 14px;
+    border-radius: var(--default-radius);
+    display: flex;
+    align-items: center;
+}
+
+.info-dropdown-btn img {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    top: 52px;
+    z-index: 1;
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    padding: 6px 10px 6px 10px;
+    border-radius: var(--default-radius);
+    background-color: var(--white-color);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.11);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0 10px 0 10px;
+    border-radius: var(--default-radius);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--white-02-color);
+}
+
+/*================ Linha tracejada ================*/
+
 .dashed-line {
-    border: 1px dashed var(--fog-gray-color);
     margin: 20px 0 20px 0;
+    border: 1px dashed var(--white-04-color);
 }
 
 /*================ Percentage bar status ================*/
 
 #percentage-bar-container {
+    padding: 14px;
     background-color: var(--white-color);
     border-radius: var(--default-radius);
-    padding: 14px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#percentage-bar-container #percentage-bar-header-container {
+#percentage-bar-header-container {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 8px;
+    justify-content: space-between;
 }
 
-#percentage-bar-container #percentage-bar-header-container #percentage {
-    display: flex;
-    align-items: center;
-    font-size: var(--medium-size);
-    color: var(--black-color);
-}
-
-#percentage-bar-container #percentage-bar-text-container {
+#percentage {
     display: flex;
     align-items: center;
 }
 
-#percentage-bar-container #percentage-bar-text-container img {
+#percentage-bar-text-container {
+    display: flex;
+    align-items: center;
+}
+
+#percentage-bar-text-container img {
     margin-right: 7px;
 }
 
-#percentage-bar-container #bar-container {
-    background-color: var(--light-2-gray-color);
+#bar-container {
     width: 100%;
     height: 7px;
     border-radius: var(--high-radius);
+    background-color: var(--white-03-color);
 }
 
-#percentage-bar-container #bar-container #bar-indicator {
-    background: linear-gradient(90deg, #FC9C33 49.57%, #1D8F21 100%);
+#bar-indicator {
     width: 0%;
     height: 7px;
     border-radius: var(--high-radius);
+    background: linear-gradient(90deg, #FC9C33 49.57%, #1D8F21 100%);
 }
 
 /*================ Cards ================*/
@@ -89,13 +131,11 @@ aside {
     height: 115px;
 }
 
-
 .card-container {
-
     display: flex;
     align-items: center;
-    background-color: var(--white-color);
     padding: 14px;
+    background-color: var(--white-color);
     border-radius: var(--default-radius);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -114,26 +154,75 @@ aside {
 }
 
 #elipse-blocked {
-    background-color: var(--dark-gray-color);
+    background-color: var(--gray-02-color);
     grid-area: 1 / 1 / 2 / 2;
 }
 
 #elipse-sold {
-    background-color: var(--default-red-color);
+    background-color: var(--red-01-color);
     grid-area: 1 / 2 / 2 / 3;
 }
 
 #elipse-reserved {
-    background-color: var(--default-orange-color);
+    background-color: var(--orange-01-color);
     grid-area: 2 / 1 / 3 / 2;
 }
 
 #elipse-available {
-    background-color: var(--default-green-color);
+    background-color: var(--green-02-color);
     grid-area: 2 / 2 / 3 / 3;
 }
 
-/*================ Filter ================*/
+/*================ Filter Dropdown btn ================*/
+.filter-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-select-btn {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 12px 14px;
+    background-color: var(--white-color);
+    border-radius: var(--default-radius);
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.option-wrapper {
+    position: relative;
+    top: -2px;
+}
+
+.option-dropdown {
+    border-top: none;
+    display: none;
+    position: absolute;
+    background-color: var(--white-color);
+    z-index: 1;
+    width: 100%;
+}
+
+.option-dropdown a {
+    display: block;
+    font-size: var(--high-size);
+    padding: 0 14px 0 14px;
+    border-radius: var(--default-radius);
+
+    color: var(--default-gray-color);
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 6px 6px 6px 6px;
+}
+
+.option-dropdown a:hover {
+    background-color: var(--light-gray-color);
+}
+
 
 .filte-title {
     margin-bottom: 5px;
@@ -141,15 +230,8 @@ aside {
 
 #filter-btn {
     margin-top: 10px;
-    text-transform: uppercase;
     background-color: var(--dark-green-color);
-    color: var(--white-color);
     width: 100%;
     border-radius: var(--default-radius);
     padding: 12px 0 12px 0;
-
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }

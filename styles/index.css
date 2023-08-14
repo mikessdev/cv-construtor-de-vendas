@@ -15,28 +15,52 @@ html {
 :root {
     /*================ Colors ================*/
     --black-color: #333333;
-
+    
     --white-color: #FFFFFF;
+    --white-02-color: #F5F5F5;
+    --white-03-color: #E7E7E7;
+    --white-04-color: #DDDDDD;
+
+    --green-01-color: #409A75;
+    --green-02-color: #51A351;
+
+    --gray-01-color: #666;
+    --gray-02-color: #999;
+
+    --red-01-color: #EC5D59;
+
+    --orange-01-color: #F89406;
+
+
+    /* 🚀🚀 */
 
     --light-gray-color: #F5F5F5;
     --light-2-gray-color: #E7E7E7;
     --fog-gray-color: #DDDDDD;
     --default-gray-color: #666;
     --dark-gray-color: #999;
-    
+
     --default-red-color: #EC5D59;
     --default-orange-color: #F89406;
 
     --dark-green-color: #2E6E66;
     --light-green-color: #409A75;
     --default-green-color: #51A351;
-    
+
 
 
 
     /*================ Font sizes ================*/
-    --high-size: 1rem;  /*10px*/
-    --medium-size: 0.8rem;  /*8px*/
+    --10px-size: 1rem;
+    /*10px*/
+    --08px-size: 0.8rem;
+    /*8px*/
+
+    /* 🚀🚀 */
+    --high-size: 1rem;
+    /*10px*/
+    --medium-size: 0.8rem;
+    /*8px*/
 
     /*================ Border radius ================*/
     --default-radius: 4px;
@@ -61,17 +85,56 @@ body {
         grid-template-rows: 0.5fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        }
+    }
 }
 
 @media (max-width: 320px) {
-   body {
-    display: flex;
-    flex-direction: column;
-   }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-/*================ Text styles ================*/
+/*================ Font styles ================*/
+.text-variant-01 {
+    font-size: var(--10px-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.text-variant-02 {
+    font-size: var(--10px-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-variant-03 {
+    font-size: var(--10px-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.text-variant-04 {
+    font-size: var(--10px-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.text-variant-05 {
+    font-size: var(--08px-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* 🚀🚀 */
 .title {
     font-weight: 700;
     line-height: normal;
@@ -88,8 +151,16 @@ body {
     color: var(--default-gray-color);
 }
 
-.sub-title {
-    font-size: var(--medium-size);
-    color: var(--default-gray-color);
-    text-transform: uppercase;
+/*================ Font Color ================*/
+
+.black-color {
+    color: var(--black-color);
+}
+
+.white-color {
+    color: var(--white-color);
+}
+
+.gray-01-color {
+    color: var(--gray-01-color);
 }

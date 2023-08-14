@@ -1,4 +1,45 @@
-//TODO: checar de onde vem a informação de status de venda.
+// Os funções estão organizadas em blocos, de acordo com o design do figma, sendo assim:
+
+// 1- Botão Dropdown
+//   Onde contém a lógica de abertuda e fechamento dos botões dropdown.
+
+// 2- Unidade Disponível
+///  Onde contém a lógica dó número de Unidade disponível que fica no header abaixo do Varandas do Garcia.
+
+// 3- Status de Venda
+///  Onde contém a lógica do card com barra linear degradê.
+
+// 4- Status de Venda
+///  Onde contém a lógica do card com barra linear degradê.
+
+//// e assim por diante....
+
+
+//Botão Dropdown
+function clickDropdown(dropDown, dropdownContent) {
+    toggleDropdown(dropdownContent);
+    catchClickOutside(dropDown, dropdownContent);
+};
+
+function toggleDropdown(dropdownContent) {
+    const dropdown = document.getElementById(dropdownContent);
+    dropdown.style.display = dropdown.style.display ===  "block" ?  "none" : "block";
+};
+
+function catchClickOutside(dropDown, dropdownContent) {
+    document.addEventListener("click", (event) =>  {
+        event.preventDefault();
+
+        const dropDownContainer = document.getElementById(dropDown);
+        const dropdownContentContainer = document.getElementById(dropdownContent);
+        const clickedOut = !dropDownContainer.contains(event.target);
+        const dropDownIsOpen = dropdownContentContainer.style.display === "block";
+
+        if (clickedOut && dropDownIsOpen) {
+            toggleDropdown(dropdownContent)
+        };
+    });
+};
 
 //Unidades Disponível
 let availableUnits;
@@ -21,7 +62,6 @@ function updateText(elementID, textcontent, auxText=''){
 availableUnits = enterpriseUnits.filter(e => e.status === status.available).length;
 
 updateText('available-units', availableUnits, 'Unidade Disponível');
-
 
 //Status de venda
 
@@ -66,7 +106,7 @@ function getFiltersParams() {
     if(validatedParameter) {
         filter(validatedParameter);    
     }
-}
+};
 
 function filterValidation(parameters) {
     const noParams = {
@@ -211,17 +251,23 @@ function defineStatusClass(elementStatus) {
     if(elementStatus === status.blocked) return blocked;
 };
 
+function toggleElementText(dropdownContent, button, element) {
+    toggleDropdown(dropdownContent);
+    const ButtonText = document.getElementById(button);
+    return ButtonText.textContent = element.textContent;
+};
+
 // Ordenar Por Maior ou Menor Valor
 function hideElement(elementID) {
     return document.getElementById(elementID).style.display = 'none';
-}
+};
 
 function showElement(elementID) {
     return document.getElementById(elementID).style.display = 'block';
-}
+};
 
 function sortByLowestValue(dropdownContent, button, element) {
-    selectItem(dropdownContent, button, element);
+    toggleElementText(dropdownContent, button, element);
 
     hideElement('sorted-by-lowest');
     showElement('sorted-by-highest');
@@ -231,10 +277,10 @@ function sortByLowestValue(dropdownContent, button, element) {
     });
     console.table(newSortedArray);
     createNewTable(newSortedArray);
-}
+};
 
 function sortByHighestValue(dropdownContent, button, element) {
-    selectItem(dropdownContent, button, element);
+    toggleElementText(dropdownContent, button, element);
 
     hideElement('sorted-by-highest');
     showElement('sorted-by-lowest');
@@ -244,7 +290,7 @@ function sortByHighestValue(dropdownContent, button, element) {
     });
     console.table(newSortedArray);
     createNewTable(newSortedArray);
-}
+};
 
 // Criando Tabela ao abrir o site pela primeira vez
 createNewTable(enterpriseUnits);

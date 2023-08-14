@@ -1,114 +1,5 @@
-#dropDown-btn {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.info-dropdown-btn {
-  width: 116px;
-  height: 26px;
-  background-color: var(--light-green-color);
-  text-transform: uppercase;
-  color: var(--white-color);
-  padding: 7px 14px 7px 14px;
-  border-radius: var(--default-radius);
-  display: flex;
-  align-items: center;
-  font-size: var(--high-size);
-}
-
-.info-dropdown-btn img {
-  margin-left: 5px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--white-color);
-  min-width: 160px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.11);
-  z-index: 1;
-  padding: 6px 10px 6px 10px;
-  border-radius: var(--default-radius);
-  top: 52px;
-}
-
-.dropdown-content a {
-  display: block;
-  color: var(--black-color);
-  font-size: var(--high-size);
-  text-decoration: none;
-  line-height: 34px;
-  padding: 0 10px 0 10px;
-  border-radius: var(--default-radius);
-}
-
-.dropdown-content a:hover {
-  background-color: var(--light-gray-color);
-}
-
-/*================ Filter Dropdown btn================*/
-.filter-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.filter-select-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 12px 12px 14px;
-  background-color: var(--white-color);
-  margin-top: 10px;
-  border-radius: var(--default-radius);
-  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.04);
-
-  color: var(--default-gray-color);
-  font-family: Verdana;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.option-wrapper {
-  position: relative;
-  top: -2px;
-}
-
-.option-dropdown {
-  border-top: none;
-  display: none;
-  position: absolute;
-  background-color: var(--white-color);
-  z-index: 1;
-  width: 100%;
-}
 
 
-
-.option-dropdown a {
-  display: block;
-  color: var(--black-color);
-  font-size: var(--high-size);
-  text-decoration: none;
-  line-height: 34px;
-  padding: 0 14px 0 14px;
-  border-radius: var(--default-radius);
-
-  color: var(--default-gray-color);
-  font-family: Verdana;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  line-height: 34px;
-  margin: 6px 6px 6px 6px;
-}
-
-.option-dropdown a:hover {
-  background-color: var(--light-gray-color);
-}
 
 /*================ main sort Dropdown ================*/
 #main-dropdown {
@@ -127,20 +18,17 @@
   border-radius: var(--default-radius);
 }
 
-#main-dropdown-content a {
+#main-dropdown-content .main-dropdown-item {
   color: var(--default-gray-color);
   text-decoration: none;
   font-size: var(--high-size);
-  line-height: 34px;
-  padding: 0 10px 0 10px;
+  padding: 10px;
   border-radius: var(--default-radius);
-  
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  
 }
 
-#main-dropdown-content a:hover {
+#main-dropdown-content .main-dropdown-item:hover {
   background-color: var(--light-gray-color);
 }

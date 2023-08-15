@@ -7,10 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Verdana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/aside.css">
-    <link rel="stylesheet" href="component/dropDown.css">
-    <link rel="stylesheet" href="styles/card.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/table.css">
     <title>CV - Construtor de Vendas</title>
 </head>
 
@@ -178,24 +175,24 @@
         </section>
     </aside>
     <main>
-        <header class="title , main-header" id="main-header">
-            <p id="main-title">Unidades do empreendimento</p>
+        <header class="main-header" id="main-header">
+            <p id="main-title" class="text-variant-01 black-color">Unidades do empreendimento</p>
             <div id="main-dropdown">
                 <span onclick="clickDropdown('main-dropdown', 'main-dropdown-content')">
-                    <p id="sort-by">
+                    <p id="sort-by" class="text-variant-03 gray-01-color">
                         Ordenar por
-                        <strong id="sort-by-text">
+                        <strong id="sort-by-text" class="text-variant-01 gray-01-color">
                             Menor valor
                         </strong>
                     </p>
                     <img src="assets/icons/arrow.svg">
                 </span>
                 <div id="main-dropdown-content">
-                    <a id="sorted-by-lowest" class="main-dropdown-item" href="#"
+                    <a id="sorted-by-lowest" class="main-dropdown-item text-variant-01 black-color" href="#"
                         onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
                         Menor Valor
                     </a>
-                    <a id="sorted-by-highest" class="main-dropdown-item" href="#"
+                    <a id="sorted-by-highest" class="main-dropdown-item text-variant-01 black-color" href="#"
                         onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">
                         Maior Valor
                     </a>
@@ -209,12 +206,12 @@
             <table>
                 <thead>
                     <tr id="first-column-table">
-                        <td class="table-title">Bloco</td>
-                        <td class="table-title">QTD. quartos</td>
-                        <td class="table-title">Andar</td>
-                        <td class="table-title">Área Total</td>
-                        <td class="table-title">Coluna</td>
-                        <td class="table-title">Estado</td>
+                        <td class="table-title text-variant-06 gray-01-color">Bloco</td>
+                        <td class="table-title text-variant-06 gray-01-color">QTD. quartos</td>
+                        <td class="table-title text-variant-06 gray-01-color">Andar</td>
+                        <td class="table-title text-variant-06 gray-01-color">Área Total</td>
+                        <td class="table-title text-variant-06 gray-01-color">Coluna</td>
+                        <td class="table-title text-variant-06 gray-01-color">Estado</td>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -223,8 +220,8 @@
         </div>
     </main>
 
-    <script src="data.js"></script>
-    <script src="index.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/index.js"></script>
 </body>
 
 </html>

@@ -15,8 +15,8 @@ html {
 :root {
     /*================ Colors ================*/
     --black-color: #333333;
-    
     --white-color: #FFFFFF;
+    
     --white-02-color: #F5F5F5;
     --white-03-color: #E7E7E7;
     --white-04-color: #DDDDDD;
@@ -32,35 +32,10 @@ html {
 
     --orange-01-color: #F89406;
 
-
-    /* 🚀🚀 */
-
-    --light-gray-color: #F5F5F5;
-    --light-2-gray-color: #E7E7E7;
-    --fog-gray-color: #DDDDDD;
-    --default-gray-color: #666;
-    --dark-gray-color: #999;
-
-    --default-red-color: #EC5D59;
-    --default-orange-color: #F89406;
-
-    --dark-green-color: #2E6E66;
-    --light-green-color: #409A75;
-    --default-green-color: #51A351;
-
-
-
-
     /*================ Font sizes ================*/
     --10px-size: 1rem;
     /*10px*/
     --08px-size: 0.8rem;
-    /*8px*/
-
-    /* 🚀🚀 */
-    --high-size: 1rem;
-    /*10px*/
-    --medium-size: 0.8rem;
     /*8px*/
 
     /*================ Border radius ================*/
@@ -98,61 +73,64 @@ body {
 
 /*================ Font styles ================*/
 .text-variant-01 {
-    font-size: var(--10px-size);
-    font-style: normal;
     font-weight: 700;
+    font-style: normal;
     line-height: normal;
     text-transform: uppercase;
+    font-size: var(--10px-size);
 }
 
 .text-variant-02 {
-    font-size: var(--10px-size);
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     line-height: normal;
+    font-size: var(--10px-size);
 }
 
 .text-variant-03 {
-    font-size: var(--10px-size);
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     line-height: normal;
     text-transform: uppercase;
+    font-size: var(--10px-size);
 }
 
 .text-variant-04 {
-    font-size: var(--10px-size);
-    font-style: normal;
     font-weight: 400;
+    font-style: normal;
     line-height: 34px;
+    font-size: var(--10px-size);
 }
 
 .text-variant-05 {
-    font-size: var(--08px-size);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-/* 🚀🚀 */
-.title {
-    font-weight: 700;
-    line-height: normal;
     font-style: normal;
+    line-height: normal;
     text-transform: uppercase;
-    font-size: var(--high-size);
+    font-size: var(--08px-size);
 }
 
-.title-color {
-    color: var(--black-color);
+.text-variant-06 {
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    font-size: var(--10px-size);
 }
 
-.title-variant-color {
-    color: var(--default-gray-color);
+.text-variant-07 {
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    font-size: var(--10px-size);
 }
 
-/*================ Font Color ================*/
+/*================ Font Colors ================*/
 
 .black-color {
     color: var(--black-color);

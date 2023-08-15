@@ -20,13 +20,7 @@ aside {
     justify-content: space-between;
 }
 
-#aside-top-container span {
-    font-weight: 400;
-    line-height: normal;
-    font-style: normal;
-    font-size: var(--high-size);
-    color: var(--default-gray-color);
-}
+
 
 /*================ Dropdown btn ================*/
 
@@ -123,6 +117,7 @@ aside {
 
 /*================ Cards ================*/
 #cards-container {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -203,13 +198,13 @@ aside {
     background-color: var(--white-color);
     z-index: 1;
     width: 100%;
+    padding: 6px 10px 6px 10px;
 }
 
 .option-dropdown a {
     display: block;
-    padding: 0 14px 0 14px;
+    padding: 0 10px 0 10px;
     border-radius: var(--default-radius);
-    margin: 6px 6px 6px 6px;
 }
 
 .option-dropdown a:hover {

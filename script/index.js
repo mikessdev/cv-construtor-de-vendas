@@ -204,32 +204,32 @@ function createNewTable(newTableData) {
 
         let tableRow = `
         <td class="row-container , first-row">
-            <div class="row-content1 , vertical-dashed-line">
+            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
                 ${element.block} 
             </div>
         </td>
         <td class="row-container">
-            <div class="row-content1 , vertical-dashed-line">
+            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
                 ${element.numberRooms} 
             </div>
         </td>
         <td class="row-container">
-            <div class="row-content1 , vertical-dashed-line">
+            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
                 ${element.floor} 
             </div>
         </td>
         <td class="row-container">
-            <div class="row-content1 , vertical-dashed-line">
+            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
                 ${element.totalArea} 
             </div>
         </td>
         <td class="row-container">
-            <div class="row-content1">
+            <div class="row-content, text-variant-07 , black-color">
             ${element.column} 
             </div>
         </td>
         <td class="row-container , last-row , ${defineStatusClass(element.status)}">
-            <div class="row-content1">
+            <div class="row-content , text-variant-07 , white-color">
             ${element.status} 
             </div>
         </td>`;

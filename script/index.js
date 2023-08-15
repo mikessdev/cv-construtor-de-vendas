@@ -15,33 +15,43 @@ const status = {
 
 //Unidades Disponível
 availableUnits = enterpriseUnits.filter(e => e.status === status.available).length;
-updateText('available-units', availableUnits, 'Unidade Disponível');
+updateViewText('available-units', availableUnits, 'Unidade Disponível');
+
+
+
 
 //Status de venda
-
 soldUnits = enterpriseUnits.filter(e => e.status === status.sold).length;
 
 percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
 
-updateText('percentage', percentSales, '%');
+updateViewText('percentage', percentSales, '%');
 
 const barIndicator = document.getElementById('bar-indicator');
 
 barIndicator.style.width = `${percentSales}%`; 
 
-//Situação do Empreendiemnto
 
-updateText('enterprise-available', availableUnits);
-updateText('enterprise-sold', soldUnits);
+
+
+//Situação do Empreendiemnto
+updateViewText('enterprise-available', availableUnits);
+updateViewText('enterprise-sold', soldUnits);
 
 blockedUnits = enterpriseUnits.filter(e => e.status === status.blocked).length;
-updateText('enterprise-blocked', blockedUnits);
+updateViewText('enterprise-blocked', blockedUnits);
 
 reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length;
-updateText('enterprise-reserved', reservedUnits);
+updateViewText('enterprise-reserved', reservedUnits);
+
+
+
 
 // Criando Tabela ao abrir o site pela primeira vez
-createNewTable(enterpriseUnits);
+createTable(enterpriseUnits);
+
+
+
 
 //Botão Dropdown
 function clickDropdown(dropDown, dropdownContent) {
@@ -64,14 +74,17 @@ function catchClickOutside(dropDown, dropdownContent) {
         const dropDownIsOpen = dropdownContentContainer.style.display === "block";
 
         if (clickedOut && dropDownIsOpen) {
-            toggleDropdown(dropdownContent)
+            toggleDropdown(dropdownContent);
         };
     });
 };
 
-function updateText(elementID, textcontent, auxText=''){
+function updateViewText(elementID, textcontent, auxText=''){
     return document.getElementById(elementID).textContent = `${textcontent} ${auxText}`
 };
+
+
+
 
 //Filtrar Disponibilidade
 function getFiltersParams() {
@@ -79,112 +92,81 @@ function getFiltersParams() {
     const blockParams = document.getElementById('block-params').textContent.replace(/\n/g, "").trim();
     const statusParams = document.getElementById('status-params').textContent.replace(/\n/g, "").trim();
 
-    const parameters = {
+    const params = {
         stage: stageParams,
         block: blockParams,
-        status: statusParams};
+        status: statusParams
+    };
 
-    const validatedParameter = filterValidation(parameters);
+    const validatedParameter = validator(params);
 
     if(validatedParameter) {
         filter(validatedParameter);    
-    }
+    };
 };
 
-function filterValidation(parameters) {
+function validator(params) {
+    const {stage, block, status } = params;
     const noParams = {
         stage: 'Escolha a etapa',
         block: 'Escolha a quadra',
         status: 'Situação'
-    }
+    };
 
-    let validatedParameter = {
+    let validatedParams = {
         stage: '',
         block: '',
-        status: ''}
+        status: ''
+    };
 
-    validatedParameter.stage = parameters.stage === noParams.stage ?  null : parameters.stage;
-    validatedParameter.block = parameters.block === noParams.block ? null : parameters.block;
-    validatedParameter.status = parameters.status === noParams.status ? null : parameters.status;
+    validatedParams.stage = stage === noParams.stage ? null : stage;
+    validatedParams.block = block === noParams.block ? null : block;
+    validatedParams.status = status === noParams.status ? null : status;
 
-    return parameters.stage === noParams.stage && 
-    parameters.block === noParams.block && 
-    parameters.status === noParams.status ?
-    alert('Defina pelo menos um parametro de filtragem') :
-    validatedParameter;
+    return stage === noParams.stage && 
+           block === noParams.block && 
+           status === noParams.status ?
+           alert('Defina pelo menos um parâmetro de filtragem') :
+           validatedParams;
 };
 
-function filter(parameters) {
+function filter(params) {
+    const {stage, block, status} = params;
     newFilteredArray = [];
 
-    if(parameters.stage && !parameters.block && !parameters.status) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.stage === parameters.stage;
-        })
-    };
+    newFilteredArray = enterpriseUnits.filter(e => {
+        if (
+            (!stage || e.stage === stage) &&
+            (!block || e.block === block) &&
+            (!status || e.status === status)
+        ) {
+            return true;
+        }
+        return false;
+    });
 
-    if(parameters.block && !parameters.stage && !parameters.status) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.block === parameters.block;
-        })
-    };
+    const noItemsFound = newFilteredArray.length < 1;
 
-    if(parameters.status && !parameters.block && !parameters.stage) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.status === parameters.status;
-        })
-    };
-
-    if(parameters.stage && parameters.block && !parameters.status) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.stage === parameters.stage && 
-                   e.block === parameters.block;
-        })
-    };
-
-    if(parameters.status && parameters.block && !parameters.stage) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.status === parameters.status && 
-                   e.block === parameters.block;
-        })
-    };
-
-    if(parameters.status && parameters.stage && !parameters.block ) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.status === parameters.status && 
-                   e.stage === parameters.stage;
-        })
-    };
-
-    if(parameters.status && parameters.stage && parameters.block ) {
-        newFilteredArray = enterpriseUnits.filter(e => {
-            return e.status === parameters.status && 
-                   e.stage === parameters.stage && 
-                   e.block === parameters.block;
-        })
-    };
-
-    if(newFilteredArray.length > 0) {
-        createNewTable(newFilteredArray);
+    if(!noItemsFound) {
+       return createTable(newFilteredArray);
     } else {
-        alert('Nenhum item encontrado com esses parametros');
-        createNewTable([]);
+        alert('Nenhum item encontrado com esses parâmetros');
+        return createTable([]);
     };
 };
 
 function cleanTable(table) {
     while (table.firstChild) {
         table.removeChild(table.firstChild);
-      }
+      };
 };
 
-function createNewTable(newTableData) {
+function createTable(newTableData) {
     const table = document.getElementById('table-body');
     cleanTable(table);
 
     newTableData.forEach(element => {
         let tr = document.createElement("tr");
-
         let tableRow = `
         <td class="row-container , first-row">
             <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
@@ -211,7 +193,7 @@ function createNewTable(newTableData) {
             ${element.column} 
             </div>
         </td>
-        <td class="row-container , last-row , ${defineStatusClass(element.status)}">
+        <td class="row-container , last-row , ${setStatus(element.status)}">
             <div class="row-content , text-variant-07 , white-color">
             ${element.status} 
             </div>
@@ -222,23 +204,30 @@ function createNewTable(newTableData) {
     });
 };
 
-function defineStatusClass(elementStatus) {
-    const available = 'status-available';
-    const reserved = 'status-reserved';
-    const sold = 'status-sold';
-    const blocked = 'status-blocked';
+function setStatus(elementStatus) {
+    const {available,  blocked, sold, reserved} = status;
 
-    if(elementStatus === status.available) return available;
-    if(elementStatus === status.reserved) return reserved;
-    if(elementStatus === status.sold) return sold;
-    if(elementStatus === status.blocked) return blocked;
+    const statusHtml = {
+        available: 'status-available',
+        reserved: 'status-reserved',
+        sold: 'status-sold',
+        blocked: 'status-blocked'
+    };
+
+    if(elementStatus === available) return statusHtml.available;
+    if(elementStatus === reserved) return statusHtml.reserved;
+    if(elementStatus === sold) return statusHtml.sold;
+    if(elementStatus === blocked) return statusHtml.blocked;
 };
 
-function toggleElementText(dropdownContent, button, element) {
+function changeElementText(dropdownContent, button, element) {
     toggleDropdown(dropdownContent);
     const ButtonText = document.getElementById(button);
     return ButtonText.textContent = element.textContent;
 };
+
+
+
 
 // Ordenar Por Maior ou Menor Valor
 function hideElement(elementID) {
@@ -250,7 +239,7 @@ function showElement(elementID) {
 };
 
 function sortByLowestValue(dropdownContent, button, element) {
-    toggleElementText(dropdownContent, button, element);
+    changeElementText(dropdownContent, button, element);
 
     hideElement('sorted-by-lowest');
     showElement('sorted-by-highest');
@@ -258,12 +247,11 @@ function sortByLowestValue(dropdownContent, button, element) {
     const newSortedArray = newFilteredArray.sort((a, b) => {
         return  parseInt(a.totalArea.replace('m2', '')) - parseInt(b.totalArea.replace('m2', ''));
     });
-    console.table(newSortedArray);
-    createNewTable(newSortedArray);
+    createTable(newSortedArray);
 };
 
 function sortByHighestValue(dropdownContent, button, element) {
-    toggleElementText(dropdownContent, button, element);
+    changeElementText(dropdownContent, button, element);
 
     hideElement('sorted-by-highest');
     showElement('sorted-by-lowest');
@@ -271,6 +259,5 @@ function sortByHighestValue(dropdownContent, button, element) {
     const newSortedArray = newFilteredArray.sort((a, b) => {
         return  parseInt(b.totalArea.replace('m2', '')) - parseInt(a.totalArea.replace('m2', ''));
     });
-    console.table(newSortedArray);
-    createNewTable(newSortedArray);
+    createTable(newSortedArray);
 };

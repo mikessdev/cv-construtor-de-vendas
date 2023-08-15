@@ -186,86 +186,105 @@ let enterpriseUnits = [
         status: 'Vendida',
         price: '468.000,00'
     },
-
-    {   
-        id: '6',
+    {
+        id: '17',
         stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
+        block: 'Noronha',
+        numberRooms: '4',
+        floor: '7',
+        totalArea: '64,58 m2',
+        column: '14',
         status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
-    },{   
-        id: '6',
-        stage: 'Etapa 1',
-        block: 'Carneiros',
-        numberRooms: '2',
-        floor: '2',
-        totalArea: '46,59 m2',
-        column: '16',
-        status: 'Vendida',
-        price: '310.000,00'
+        price: '210.000,00'
     },
+    {
+        id: '18',
+        stage: 'Etapa 1',
+        block: 'Noronha',
+        numberRooms: '5',
+        floor: '7',
+        totalArea: '74,58 m2',
+        column: '14',
+        status: 'Disponível',
+        price: '210.000,00'
+    },
+    {   
+        id: '19',
+        stage: 'Etapa 1',
+        block: 'Arraial do cabo',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '36,59 m2',
+        column: '16',
+        status: 'Disponível',
+        price: '668.000,00'
+    },
+    {   
+        id: '20',
+        stage: 'Etapa 1',
+        block: 'Arraial do cabo',
+        numberRooms: '1',
+        floor: '2',
+        totalArea: '26,59 m2',
+        column: '16',
+        status: 'Bloqueada',
+        price: '168.000,00'
+    },
+    {   
+        id: '21',
+        stage: 'Etapa 1',
+        block: 'Arraial do cabo',
+        numberRooms: '1',
+        floor: '2',
+        totalArea: '26,59 m2',
+        column: '16',
+        status: 'Reservada',
+        price: '268.000,00'
+    },
+    {   
+        id: '22',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '1',
+        floor: '2',
+        totalArea: '26,59 m2',
+        column: '16',
+        status: 'Reservada',
+        price: '268.000,00'
+    },
+
+    {
+        id: '23',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '4',
+        floor: '7',
+        totalArea: '64,58 m2',
+        column: '14',
+        status: 'Vendida',
+        price: '210.000,00'
+    },
+    {
+        id: '24',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '5',
+        floor: '7',
+        totalArea: '74,58 m2',
+        column: '14',
+        status: 'Disponível',
+        price: '210.000,00'
+    },
+    {   
+        id: '25',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '3',
+        floor: '8',
+        totalArea: '36,59 m2',
+        column: '16',
+        status: 'Bloqueada',
+        price: '668.000,00'
+    },
+
 ];

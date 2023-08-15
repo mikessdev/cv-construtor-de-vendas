@@ -1,1 +1,1 @@
-# cv-construtor-de-vendas
+# CV CRM - Construtor de Vendas

@@ -122,6 +122,9 @@ table {
     main {
         padding: 20px 10px;
     }
+    #main-dropdown-content{
+        right: 10px;
+    }
 }
 
 @media (max-width: 380px) {

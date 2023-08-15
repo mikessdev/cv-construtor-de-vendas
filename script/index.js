@@ -1,19 +1,47 @@
-// Os funções estão organizadas em blocos, de acordo com o design do figma, sendo assim:
+let newFilteredArray = enterpriseUnits;
 
-// 1- Botão Dropdown
-//   Onde contém a lógica de abertuda e fechamento dos botões dropdown.
+let availableUnits;
+let blockedUnits;
+let soldUnits;
+let reservedUnits;
+let percentSales;
 
-// 2- Unidade Disponível
-///  Onde contém a lógica dó número de Unidade disponível que fica no header abaixo do Varandas do Garcia.
+const status = {
+    available: 'Disponível',
+    blocked: 'Bloqueada',
+    sold: 'Vendida',
+    reserved: 'Reservada'
+};
 
-// 3- Status de Venda
-///  Onde contém a lógica do card com barra linear degradê.
+//Unidades Disponível
+availableUnits = enterpriseUnits.filter(e => e.status === status.available).length;
+updateText('available-units', availableUnits, 'Unidade Disponível');
 
-// 4- Status de Venda
-///  Onde contém a lógica do card com barra linear degradê.
+//Status de venda
 
-//// e assim por diante....
+soldUnits = enterpriseUnits.filter(e => e.status === status.sold).length;
 
+percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
+
+updateText('percentage', percentSales, '%');
+
+const barIndicator = document.getElementById('bar-indicator');
+
+barIndicator.style.width = `${percentSales}%`; 
+
+//Situação do Empreendiemnto
+
+updateText('enterprise-available', availableUnits);
+updateText('enterprise-sold', soldUnits);
+
+blockedUnits = enterpriseUnits.filter(e => e.status === status.blocked).length;
+updateText('enterprise-blocked', blockedUnits);
+
+reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length;
+updateText('enterprise-reserved', reservedUnits);
+
+// Criando Tabela ao abrir o site pela primeira vez
+createNewTable(enterpriseUnits);
 
 //Botão Dropdown
 function clickDropdown(dropDown, dropdownContent) {
@@ -41,56 +69,11 @@ function catchClickOutside(dropDown, dropdownContent) {
     });
 };
 
-//Unidades Disponível
-let availableUnits;
-let blockedUnits;
-let soldUnits;
-let reservedUnits;
-let percentSales;
-
-const status = {
-    available: 'Disponível',
-    blocked: 'Bloqueada',
-    sold: 'Vendida',
-    reserved: 'Reservada'
-};
-
 function updateText(elementID, textcontent, auxText=''){
     return document.getElementById(elementID).textContent = `${textcontent} ${auxText}`
 };
 
-availableUnits = enterpriseUnits.filter(e => e.status === status.available).length;
-
-updateText('available-units', availableUnits, 'Unidade Disponível');
-
-//Status de venda
-
-soldUnits = enterpriseUnits.filter(e => e.status === status.sold).length;
-
-percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
-
-updateText('percentage', percentSales, '%');
-
-const barIndicator = document.getElementById('bar-indicator');
-
-barIndicator.style.width = `${percentSales}%`; 
-
-//Situação do Empreendiemnto
-
-updateText('enterprise-available', availableUnits);
-updateText('enterprise-sold', soldUnits);
-
-blockedUnits = enterpriseUnits.filter(e => e.status === status.blocked).length;
-
-updateText('enterprise-blocked', blockedUnits);
-
-reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length;
-
-updateText('enterprise-reserved', reservedUnits);
-
 //Filtrar Disponibilidade
-let newFilteredArray = enterpriseUnits;
-
 function getFiltersParams() {
     const stageParams = document.getElementById('stage-params').textContent;
     const blockParams = document.getElementById('block-params').textContent;
@@ -291,6 +274,3 @@ function sortByHighestValue(dropdownContent, button, element) {
     console.table(newSortedArray);
     createNewTable(newSortedArray);
 };
-
-// Criando Tabela ao abrir o site pela primeira vez
-createNewTable(enterpriseUnits);

@@ -3,24 +3,10 @@ aside {
     padding: 20px;
 }
 
-@media (max-width: 680px) {
-    aside {
-        height: 100%;
-    }
-}
-
-@media (max-width: 380px) {
-    aside {
-        height: 100%;
-    }
-}
-
 #aside-top-container {
     display: flex;
     justify-content: space-between;
 }
-
-
 
 /*================ Dropdown btn ================*/
 
@@ -222,4 +208,19 @@ aside {
     width: 100%;
     border-radius: var(--default-radius);
     padding: 12px 0 12px 0;
+}
+
+/*================ media queries ================*/
+
+@media (max-width: 680px) {
+    aside {
+        height: 100%;
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    aside {
+        height: 100%;
+    }
 }

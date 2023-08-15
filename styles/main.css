@@ -110,19 +110,6 @@ table {
 
 /*================ media queries ================*/
 
-@media (max-width: 680px) {
-    main {
-        padding: 20px 10px;
-    }
-}
-
-@media (max-width: 380px) {
-
-    #main-title {
-        max-width: 100px;
-    }
-}
-
 @media (max-width: 750px) {
     #sort-by {
         text-align: right;
@@ -130,6 +117,19 @@ table {
     }
 
 }
+
+@media (max-width: 680px) {
+    main {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    #main-title {
+        max-width: 100px;
+    }
+}
+
 
 @media (max-width: 320px) {
     .table-container {

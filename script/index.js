@@ -75,14 +75,14 @@ function updateText(elementID, textcontent, auxText=''){
 
 //Filtrar Disponibilidade
 function getFiltersParams() {
-    const stageParams = document.getElementById('stage-params').textContent;
-    const blockParams = document.getElementById('block-params').textContent;
-    const statusParams = document.getElementById('status-params').textContent;
+    const stageParams = document.getElementById('stage-params').textContent.replace(/\n/g, "").trim();
+    const blockParams = document.getElementById('block-params').textContent.replace(/\n/g, "").trim();
+    const statusParams = document.getElementById('status-params').textContent.replace(/\n/g, "").trim();
 
     const parameters = {
-        stage: stageParams.replace(/\n/g, "").trim(),
-        block: blockParams.replace(/\n/g, "").trim(),
-        status: statusParams.replace(/\n/g, "").trim()};
+        stage: stageParams,
+        block: blockParams,
+        status: statusParams};
 
     const validatedParameter = filterValidation(parameters);
 
@@ -256,7 +256,7 @@ function sortByLowestValue(dropdownContent, button, element) {
     showElement('sorted-by-highest');
 
     const newSortedArray = newFilteredArray.sort((a, b) => {
-        return  parseInt(a.price) - parseInt(b.price);
+        return  parseInt(a.totalArea.replace('m2', '')) - parseInt(b.totalArea.replace('m2', ''));
     });
     console.table(newSortedArray);
     createNewTable(newSortedArray);
@@ -269,7 +269,7 @@ function sortByHighestValue(dropdownContent, button, element) {
     showElement('sorted-by-lowest');
 
     const newSortedArray = newFilteredArray.sort((a, b) => {
-        return  parseInt(b.price) - parseInt(a.price);
+        return  parseInt(b.totalArea.replace('m2', '')) - parseInt(a.totalArea.replace('m2', ''));
     });
     console.table(newSortedArray);
     createNewTable(newSortedArray);

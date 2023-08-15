@@ -1,18 +1,18 @@
 let enterpriseUnits = [
     {
         id: '1',
-        stage: 'Etapa 1',
+        stage: 'Etapa 4',
         block: 'Maragogi',
         numberRooms: '3',
         floor: '3',
-        totalArea: '32,99 m2',
+        totalArea: '32,49 m2',
         column: '15',
         status: 'Disponível',
         price: '300.000,00'
     },
     {   
         id: '2',
-        stage: 'Etapa 1',
+        stage: 'Etapa 2',
         block: 'Trancoso',
         numberRooms: '3',
         floor: '3',
@@ -27,7 +27,7 @@ let enterpriseUnits = [
         block: 'Noronha',
         numberRooms: '2',
         floor: '5',
-        totalArea: '54,58 m2',
+        totalArea: '56,58 m2',
         column: '14',
         status: 'Reservada',
         price: '210.000,00'
@@ -38,7 +38,7 @@ let enterpriseUnits = [
         block: 'Maragogi',
         numberRooms: '2',
         floor: '5',
-        totalArea: '32,99 m2',
+        totalArea: '33,99 m2',
         column: '14',
         status: 'Vendida',
         price: '280.000,00'
@@ -71,7 +71,7 @@ let enterpriseUnits = [
         block: 'Maragogi',
         numberRooms: '3',
         floor: '7',
-        totalArea: '32,99 m2',
+        totalArea: '32,29 m2',
         column: '14',
         status: 'Reservada',
         price: '343.000,00'
@@ -82,7 +82,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '46,19 m2',
         column: '16',
         status: 'Vendida',
         price: '180.000,00'
@@ -93,7 +93,7 @@ let enterpriseUnits = [
         block: 'Maragogi',
         numberRooms: '3',
         floor: '7',
-        totalArea: '32,99 m2',
+        totalArea: '32,59 m2',
         column: '14',
         status: 'Reservada',
         price: '313.000,00'
@@ -104,7 +104,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '41,59 m2',
         column: '16',
         status: 'Reservada',
         price: '298.000,00'
@@ -115,7 +115,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '46,29 m2',
         column: '16',
         status: 'Bloqueada',
         price: '298.000,00'
@@ -126,7 +126,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '48,19 m2',
         column: '16',
         status: 'Disponível',
         price: '298.000,00'
@@ -137,7 +137,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '41,22 m2',
         column: '16',
         status: 'Reservada',
         price: '299.000,00'
@@ -148,7 +148,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '42,77 m2',
         column: '16',
         status: 'Bloqueada',
         price: '268.000,00'
@@ -159,7 +159,7 @@ let enterpriseUnits = [
         block: 'Trancoso',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '42,27 m2',
         column: '16',
         status: 'Vendida',
         price: '368.000,00'
@@ -170,7 +170,7 @@ let enterpriseUnits = [
         block: 'Arraial do cabo',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '62,62 m2',
         column: '16',
         status: 'Vendida',
         price: '368.000,00'
@@ -181,7 +181,7 @@ let enterpriseUnits = [
         block: 'Arraial do cabo',
         numberRooms: '3',
         floor: '8',
-        totalArea: '46,59 m2',
+        totalArea: '77,59 m2',
         column: '16',
         status: 'Vendida',
         price: '468.000,00'
@@ -214,7 +214,7 @@ let enterpriseUnits = [
         block: 'Arraial do cabo',
         numberRooms: '3',
         floor: '8',
-        totalArea: '36,59 m2',
+        totalArea: '32,19 m2',
         column: '16',
         status: 'Disponível',
         price: '668.000,00'
@@ -247,7 +247,7 @@ let enterpriseUnits = [
         block: 'Carneiros',
         numberRooms: '1',
         floor: '2',
-        totalArea: '26,59 m2',
+        totalArea: '52,51 m2',
         column: '16',
         status: 'Reservada',
         price: '268.000,00'

@@ -41,7 +41,7 @@ table {
 .row-container {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: var(--light-gray-color);
+    background-color: var(--white-02-color);
 }
 
 .row-content {

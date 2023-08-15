@@ -218,9 +218,3 @@ aside {
         padding: 20px 10px;
     }
 }
-
-@media (max-width: 380px) {
-    aside {
-        height: 100%;
-    }
-}

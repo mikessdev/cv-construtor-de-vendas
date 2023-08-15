@@ -186,4 +186,86 @@ let enterpriseUnits = [
         status: 'Vendida',
         price: '468.000,00'
     },
+
+    {   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },{   
+        id: '6',
+        stage: 'Etapa 1',
+        block: 'Carneiros',
+        numberRooms: '2',
+        floor: '2',
+        totalArea: '46,59 m2',
+        column: '16',
+        status: 'Vendida',
+        price: '310.000,00'
+    },
 ];

@@ -64,13 +64,6 @@ body {
     }
 }
 
-@media (max-width: 320px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 /*================ Font styles ================*/
 .text-variant-01 {
     font-weight: 700;

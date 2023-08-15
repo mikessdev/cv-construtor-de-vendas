@@ -1,10 +1,5 @@
 let newFilteredArray = enterpriseUnits;
 
-let availableUnits;
-let blockedUnits;
-let soldUnits;
-let reservedUnits;
-let percentSales;
 
 const status = {
     available: 'Disponível',
@@ -13,45 +8,29 @@ const status = {
     reserved: 'Reservada'
 };
 
-//Unidades Disponível
-availableUnits = enterpriseUnits.filter(e => e.status === status.available).length;
+const {available,  blocked, sold, reserved} = status;
+
+//Unidades Disponível & Situação do Empreendiemnto
+const availableUnits = enterpriseUnits.filter(e => e.status === available).length;
+const soldUnits = enterpriseUnits.filter(e => e.status === sold).length;
+const blockedUnits = enterpriseUnits.filter(e => e.status === blocked).length;
+const reservedUnits = enterpriseUnits.filter(e => e.status === reserved).length;
+
 updateViewText('available-units', availableUnits, 'Unidade Disponível');
-
-
-
+updateViewText('enterprise-available', availableUnits);
+updateViewText('enterprise-sold', soldUnits);
+updateViewText('enterprise-blocked', blockedUnits);
+updateViewText('enterprise-reserved', reservedUnits);
 
 //Status de venda
-soldUnits = enterpriseUnits.filter(e => e.status === status.sold).length;
-
-percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
-
-updateViewText('percentage', percentSales, '%');
-
+const percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
 const barIndicator = document.getElementById('bar-indicator');
 
 barIndicator.style.width = `${percentSales}%`; 
-
-
-
-
-//Situação do Empreendiemnto
-updateViewText('enterprise-available', availableUnits);
-updateViewText('enterprise-sold', soldUnits);
-
-blockedUnits = enterpriseUnits.filter(e => e.status === status.blocked).length;
-updateViewText('enterprise-blocked', blockedUnits);
-
-reservedUnits = enterpriseUnits.filter(e => e.status === status.reserved).length;
-updateViewText('enterprise-reserved', reservedUnits);
-
-
-
+updateViewText('percentage', percentSales, '%');
 
 // Criando Tabela ao abrir o site pela primeira vez
 createTable(enterpriseUnits);
-
-
-
 
 //Botão Dropdown
 function clickDropdown(dropDown, dropdownContent) {
@@ -82,9 +61,6 @@ function catchClickOutside(dropDown, dropdownContent) {
 function updateViewText(elementID, textcontent, auxText=''){
     return document.getElementById(elementID).textContent = `${textcontent} ${auxText}`
 };
-
-
-
 
 //Filtrar Disponibilidade
 function getFiltersParams() {
@@ -226,9 +202,6 @@ function changeElementText(dropdownContent, button, element) {
     return ButtonText.textContent = element.textContent;
 };
 
-
-
-
 // Ordenar Por Maior ou Menor Valor
 function hideElement(elementID) {
     return document.getElementById(elementID).style.display = 'none';
@@ -245,7 +218,7 @@ function sortByLowestValue(dropdownContent, button, element) {
     showElement('sorted-by-highest');
 
     const newSortedArray = newFilteredArray.sort((a, b) => {
-        return  parseInt(a.totalArea.replace('m2', '')) - parseInt(b.totalArea.replace('m2', ''));
+        return parseInt(a.totalArea.replace('m2', '')) - parseInt(b.totalArea.replace('m2', ''));
     });
     createTable(newSortedArray);
 };
@@ -257,7 +230,7 @@ function sortByHighestValue(dropdownContent, button, element) {
     showElement('sorted-by-lowest');
 
     const newSortedArray = newFilteredArray.sort((a, b) => {
-        return  parseInt(b.totalArea.replace('m2', '')) - parseInt(a.totalArea.replace('m2', ''));
+        return parseInt(b.totalArea.replace('m2', '')) - parseInt(a.totalArea.replace('m2', ''));
     });
     createTable(newSortedArray);
 };

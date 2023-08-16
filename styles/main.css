@@ -55,7 +55,7 @@ table {
 }
 
 .vertical-dashed-line {
-    border-right: 1px dashed var(--white-04-color);
+    border-right: 1px dashed var(--gray-03-color);
 }
 
 .last-row {
@@ -83,6 +83,7 @@ table {
 
 #main-dropdown {
     display: relative;
+    cursor: pointer;
 }
 
 #main-dropdown-content {
@@ -109,11 +110,26 @@ table {
 }
 
 /*================ media queries ================*/
+@media (max-width: 859px) {
+    #main-header {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 785px) {
+    #main-header {
+        margin-bottom: 29px;
+    }
+}
 
 @media (max-width: 750px) {
     #sort-by {
         text-align: right;
         max-width: 90px;
+    }
+
+    #main-header {
+        margin-bottom: 17px;
     }
 
 }

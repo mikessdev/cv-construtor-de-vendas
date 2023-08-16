@@ -1,6 +1,7 @@
 aside {
-    background-color: var(--white-02-color);
     padding: 20px;
+    user-select: none;
+    background-color: var(--white-02-color);
 }
 
 #aside-top-container {
@@ -18,11 +19,12 @@ aside {
 .info-dropdown-btn {
     width: 116px;
     height: 26px;
-    background-color: var(--green-01-color);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
     padding: 7px 14px 7px 14px;
     border-radius: var(--default-radius);
-    display: flex;
-    align-items: center;
+    background-color: var(--green-01-color);
 }
 
 .info-dropdown-btn img {
@@ -103,19 +105,19 @@ aside {
 
 /*================ Cards ================*/
 #cards-container {
-    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 14px;
-    grid-row-gap: 14px;
     height: 115px;
+    margin-top: 20px;
+    grid-row-gap: 14px;
+    grid-column-gap: 14px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .card-container {
     display: flex;
-    align-items: center;
     padding: 14px;
+    align-items: center;
     background-color: var(--white-color);
     border-radius: var(--default-radius);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -162,11 +164,12 @@ aside {
 
 .filter-select-btn {
     display: flex;
+    cursor: pointer;
     margin-top: 10px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     padding: 12px 12px 12px 14px;
+    justify-content: space-between;
     background-color: var(--white-color);
     border-radius: var(--default-radius);
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.04);
@@ -178,13 +181,13 @@ aside {
 }
 
 .option-dropdown {
-    border-top: none;
-    display: none;
-    position: absolute;
-    background-color: var(--white-color);
     z-index: 1;
     width: 100%;
+    display: none;
+    border-top: none;
+    position: absolute;
     padding: 6px 10px 6px 10px;
+    background-color: var(--white-color);
 }
 
 .option-dropdown a {
@@ -203,11 +206,12 @@ aside {
 }
 
 #filter-btn {
-    margin-top: 10px;
-    background-color: var(--green-03-color);
     width: 100%;
-    border-radius: var(--default-radius);
+    cursor: pointer;
+    margin-top: 10px;
     padding: 12px 0 12px 0;
+    border-radius: var(--default-radius);
+    background-color: var(--green-03-color);
 }
 
 /*================ media queries ================*/

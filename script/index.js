@@ -144,40 +144,25 @@ function createTable(newTableData) {
     newTableData.forEach(element => {
         let tr = document.createElement("tr");
         let tableRow = `
-        <td class="row-container , first-row">
-            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
-                ${element.block} 
-            </div>
-        </td>
-        <td class="row-container">
-            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
-                ${element.numberRooms} 
-            </div>
-        </td>
-        <td class="row-container">
-            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
-                ${element.floor} 
-            </div>
-        </td>
-        <td class="row-container">
-            <div class="row-content , text-variant-07 , black-color , vertical-dashed-line">
-                ${element.totalArea} 
-            </div>
-        </td>
-        <td class="row-container">
-            <div class="row-content, text-variant-07 , black-color">
-            ${element.column} 
-            </div>
-        </td>
-        <td class="row-container , last-row , ${setStatus(element.status)}">
-            <div class="row-content , text-variant-07 , white-color">
-            ${element.status} 
-            </div>
-        </td>`;
+        ${mountTableLine(element.block, ' , first-row',  ' , vertical-dashed-line')}
+        ${mountTableLine(element.numberRooms, '', ' , vertical-dashed-line')}
+        ${mountTableLine(element.floor, '', ' , vertical-dashed-line')}
+        ${mountTableLine(element.totalArea, '', ' , vertical-dashed-line')}
+        ${mountTableLine(element.column)}
+        ${mountTableLine(element.status, `, last-row , ${setStatus(element.status)}` , ' , white-color')}
+        `;
     
         table.appendChild(tr);
         tr.innerHTML = tableRow;
     });
+};
+
+function mountTableLine(prop, auxClass = '', dashedLine = '', textColor = ', black-color') {
+    return `<td class="row-container ${auxClass}">
+                <div class="row-content , ${dashedLine} text-variant-07 , ${textColor}">
+                    ${prop} 
+                </div>
+            </td>`
 };
 
 function setStatus(elementStatus) {

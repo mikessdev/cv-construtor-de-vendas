@@ -14,9 +14,7 @@ html {
 
 :root {
     /*================ Colors ================*/
-    --black-color: #333333;
     --white-color: #FFFFFF;
-    
     --white-02-color: #F5F5F5;
     --white-03-color: #E7E7E7;
     --white-04-color: #DDDDDD;
@@ -24,9 +22,11 @@ html {
     --green-01-color: #409A75;
     --green-02-color: #51A351;
     --green-03-color: #2E6E66;
-
+    
+    --black-color: #333333;
     --gray-01-color: #666;
     --gray-02-color: #999;
+    --gray-03-color: #C3C3C3;
 
     --red-01-color: #EC5D59;
 

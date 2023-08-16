@@ -16,7 +16,7 @@ const soldUnits = enterpriseUnits.filter(e => e.status === sold).length;
 const blockedUnits = enterpriseUnits.filter(e => e.status === blocked).length;
 const reservedUnits = enterpriseUnits.filter(e => e.status === reserved).length;
 
-updateViewText('available-units', availableUnits);
+updateViewText('available-units', availableUnits, 'Unidade Disponível');
 updateViewText('enterprise-available', availableUnits);
 updateViewText('enterprise-sold', soldUnits);
 updateViewText('enterprise-blocked', blockedUnits);
@@ -24,10 +24,10 @@ updateViewText('enterprise-reserved', reservedUnits);
 
 //Status de venda
 const percentSales = ((soldUnits * 100) / enterpriseUnits.length).toFixed(2);
-const barIndicator = document.getElementById('bar-indicator');
+const barIndicator = document.getElementById('a-percentBar__indicator');
 
 barIndicator.style.width = `${percentSales}%`; 
-updateViewText('percentage', percentSales, '%');
+updateViewText('a-percentBar__percent', percentSales, '%');
 
 // Criando Tabela ao abrir o site pela primeira vez
 createTable(enterpriseUnits);
@@ -64,9 +64,9 @@ function updateViewText(elementID, textcontent, auxText=''){
 
 //Filtrar Disponibilidade
 function getFiltersParams() {
-    const stageParams = document.getElementById('stage-params').textContent.replace(/\n/g, "").trim();
-    const blockParams = document.getElementById('block-params').textContent.replace(/\n/g, "").trim();
-    const statusParams = document.getElementById('status-params').textContent.replace(/\n/g, "").trim();
+    const stageParams = document.getElementById('a-filter__stage').textContent.replace(/\n/g, "").trim();
+    const blockParams = document.getElementById('a-filter__block').textContent.replace(/\n/g, "").trim();
+    const statusParams = document.getElementById('a-filter__status').textContent.replace(/\n/g, "").trim();
 
     const params = {
         stage: stageParams,

@@ -4,27 +4,23 @@ aside {
     background-color: var(--white-02-color);
 }
 
-#aside-top-container {
+#a-header {
     display: flex;
     justify-content: space-between;
 }
 
 /*================ Dropdown btn ================*/
 
-#available-units-container {
-    display: flex;
+#a-header__content {
+    margin-right: 20px;
 }
 
-#available-units {
-    margin-right: 5px;
-}
-
-#dropDown-btn {
+#a-header__dropdown {
     display: flex;
     justify-content: flex-end;
 }
 
-.info-dropdown-btn {
+.a-header__btn {
     width: 116px;
     height: 26px;
     display: flex;
@@ -35,11 +31,11 @@ aside {
     background-color: var(--green-01-color);
 }
 
-.info-dropdown-btn img {
+.a-header__btn img {
     margin-left: 5px;
 }
 
-.dropdown-content {
+#a-header__list {
     top: 52px;
     z-index: 1;
     display: none;
@@ -51,13 +47,13 @@ aside {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.11);
 }
 
-.dropdown-content li {
+#a-header__list li {
     display: block;
     padding: 0 10px 0 10px;
     border-radius: var(--default-radius);
 }
 
-.dropdown-content li:hover {
+#a-header__list li:hover {
     background-color: var(--white-02-color);
 }
 
@@ -70,14 +66,14 @@ aside {
 
 /*================ Percentage bar status ================*/
 
-#percentage-bar-container {
+#a-percentBar {
     padding: 14px;
     background-color: var(--white-color);
     border-radius: var(--default-radius);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#percentage-bar-header-container {
+#a-percentBar__content {
     display: flex;
     margin-bottom: 8px;
     justify-content: space-between;
@@ -88,23 +84,23 @@ aside {
     align-items: center;
 }
 
-#percentage-bar-text-container {
+#a-percentBar__text {
     display: flex;
     align-items: center;
 }
 
-#percentage-bar-text-container img {
+#a-percentBar__text img {
     margin-right: 7px;
 }
 
-#bar-container {
+#a-percentBar__wrapper {
     width: 100%;
     height: 7px;
     border-radius: var(--high-radius);
     background-color: var(--white-03-color);
 }
 
-#bar-indicator {
+#a-percentBar__indicator {
     width: 0%;
     height: 7px;
     border-radius: var(--high-radius);
@@ -112,7 +108,7 @@ aside {
 }
 
 /*================ Cards ================*/
-#cards-container {
+#a-cards__container {
     display: grid;
     height: 115px;
     margin-top: 20px;
@@ -122,7 +118,7 @@ aside {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.card-container {
+.a-cards__card {
     display: flex;
     padding: 14px;
     align-items: center;
@@ -131,13 +127,13 @@ aside {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.card-content {
+.a-cards__content {
     display: flex;
     flex-direction: column;
     padding: 0px;
 }
 
-.card-elipse {
+.a-cards__elipse {
     width: 18px;
     height: 18px;
     border-radius: 100%;
@@ -165,7 +161,11 @@ aside {
 }
 
 /*================ Filter Dropdown btn ================*/
-.filter-container {
+.a-filter__title {
+    margin-bottom: 5px;
+}
+
+.a-filter__content {
     display: flex;
     flex-direction: column;
 }
@@ -183,12 +183,12 @@ aside {
     box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
-.option-wrapper {
+.a-filter__wrapper {
     position: relative;
     top: -2px;
 }
 
-.option-dropdown {
+.a-filter__list {
     z-index: 1;
     width: 100%;
     display: none;
@@ -198,22 +198,17 @@ aside {
     background-color: var(--white-color);
 }
 
-.option-dropdown li {
+.a-filter__list li {
     display: block;
     padding: 0 10px 0 10px;
     border-radius: var(--default-radius);
 }
 
-.option-dropdown li:hover {
+.a-filter__list li:hover {
     background-color: var(--white-02-color);
 }
 
-
-.filte-title {
-    margin-bottom: 5px;
-}
-
-#filter-btn {
+#a-filter__btn {
     width: 100%;
     cursor: pointer;
     margin-top: 10px;

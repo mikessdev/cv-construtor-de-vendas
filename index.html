@@ -15,69 +15,64 @@
 
 <body>
     <aside>
-        <section id="aside-top-container">
-            <div>
+        <section id="a-header">
+            <div id="a-header__content">
                 <h1 class="text-variant-01 black-color">
                     Varandas do Garcia
                 </h1>
-                <div id="available-units-container" class="text-variant-02 gray-01-color">
-                    <span id="available-units">
-                        0
-                    </span>
-                    <p>
-                         Unidade Disponível
-                    </p>
-                </div>
+                <p id="available-units" class="text-variant-02 gray-01-color">
+                    0 Unidade Disponível
+                </p>
             </div>
-            <div class="dropDown" id="dropDown-btn">
-                <Button class="info-dropdown-btn text-variant-03 white-color" onclick="clickDropdown('dropDown-btn', 'dropdownContent')">
+            <div id="a-header__dropdown">
+                <Button class="a-header__btn text-variant-03 white-color" onclick="clickDropdown('a-header__dropdown', 'a-header__list')">
                     Informações
                     <img src="assets/icons/polygon-white.svg" alt="dropdown arrow icon">
                 </Button>
-                <ul class="dropdown-content " id="dropdownContent">
-                    <li class="text-variant-04 black-color">
+                <ul id="a-header__list" class="text-variant-04 black-color">
+                    <li>
                         Tabela de Preços
                     </li>
-                    <li class="text-variant-04 black-color">
+                    <li>
                         Valores dos Espaços
                     </li>
-                    <li class="text-variant-04 black-color">
+                    <li>
                         Arquivos do empreendimento
                     </li>
-                    <li class="text-variant-04 black-color">
+                    <li>
                         Materiais de Campanha
                     </li>
                 </ul>
             </div>
         </section>
         <hr class="dashed-line">
-        <section id="percentage-bar-container">
-            <div id="percentage-bar-header-container">
-                <div id="percentage-bar-text-container">
+        <section id="a-percentBar">
+            <div id="a-percentBar__content">
+                <div id="a-percentBar__text">
                     <img src="assets/icons/trophy.svg" alt="trophy icon" width="17" height="17">
                     <p class="text-variant-05 black-color">
                         Status de venda
                     </p>
                 </div>
-                <span id="percentage" class="text-variant-05 black-color">
+                <span id="a-percentBar__percent" class="text-variant-05 black-color">
                     00.00%
                 </span>
             </div>
-            <div id="bar-container">
-                <div id="bar-indicator">
+            <div id="a-percentBar__wrapper">
+                <div id="a-percentBar__indicator">
                 </div>
             </div>
         </section>
         <hr class="dashed-line">
-        <section>
+        <section id="a-cards">
             <h2 class="text-variant-01 black-color">
                 Situação do empreendimento
             </h2>
-            <div id="cards-container">
-                <div class="card-container">
-                    <div class='card-elipse' id="elipse-blocked">
+            <div id="a-cards__container">
+                <div class="a-cards__card">
+                    <div class='a-cards__elipse' id="elipse-blocked">
                     </div>
-                    <div class='card-content'>
+                    <div class='a-cards__content'>
                         <span class="text-variant-01 gray-01-color" id="enterprise-blocked">
                             0
                         </span>
@@ -86,10 +81,10 @@
                         </h3>
                     </div>
                 </div>
-                <div class="card-container">
-                    <div class='card-elipse' id="elipse-sold">
+                <div class="a-cards__card">
+                    <div class='a-cards__elipse' id="elipse-sold">
                     </div>
-                    <div class='card-content'>
+                    <div class='a-cards__content'>
                         <span class="text-variant-01 gray-01-color" id="enterprise-sold">
                             0
                         </span>
@@ -98,10 +93,10 @@
                         </h3>
                     </div>
                 </div>
-                <div class="card-container">
-                    <div class='card-elipse' id="elipse-reserved">
+                <div class="a-cards__card">
+                    <div class='a-cards__elipse' id="elipse-reserved">
                     </div>
-                    <div class='card-content'>
+                    <div class='a-cards__content'>
                         <span class="text-variant-01 gray-01-color" id="enterprise-reserved">
                             0
                         </span>
@@ -110,10 +105,10 @@
                         </h3>
                     </div>
                 </div>
-                <div class="card-container">
-                    <div class='card-elipse' id="elipse-available">
+                <div class="a-cards__card">
+                    <div class='a-cards__elipse' id="elipse-available">
                     </div>
-                    <div class='card-content'>
+                    <div class='a-cards__content'>
                         <span class="text-variant-01 gray-01-color" id="enterprise-available">
                             1321
                         </span>
@@ -123,110 +118,109 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section id="a-filter">
         <hr class="dashed-line">
         <section>
-            <h2 class="text-variant-01 black-color filte-title">
+            <h2 class="a-filter__title text-variant-01 black-color">
                 Filtrar disponibilidade
             </h2>
-            <div class="filter-container dropDown" id="filter-dropDown-01">
-                <Button  id="stage-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
+            <div class="a-filter__content" id="filter-dropDown-01">
+                <Button  id="a-filter__stage" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
                     Escolha a etapa
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
-                <div class="option-wrapper">
-                    <ul class="option-dropdown" id="Form-Dropdown-01">
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                <div class="a-filter__wrapper">
+                    <ul class="a-filter__list text-variant-04 black-color" id="Form-Dropdown-01">
+                        <li onclick="changeElementText('Form-Dropdown-01', 'a-filter__stage', this)">
                             Etapa 1
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-01', 'a-filter__stage', this)">
                             Etapa 2
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-01', 'a-filter__stage', this)">
                             Etapa 3
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-01', 'a-filter__stage', this)">
                             Etapa 4
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="filter-container dropDown" id="filter-dropDown-02">
-                <Button id="block-params" class="filter-select-btn text-variant-02 gray-01-color" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
+            <div class="a-filter__content" id="filter-dropDown-02">
+                <Button id="a-filter__block" class="filter-select-btn text-variant-02 gray-01-color" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
                     Escolha a quadra
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
-                <div class="option-wrapper">
-                    <ul class="option-dropdown" id="Form-Dropdown-02">
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                <div class="a-filter__wrapper">
+                    <ul class="a-filter__list text-variant-04 black-color" id="Form-Dropdown-02">
+                        <li onclick="changeElementText('Form-Dropdown-02', 'a-filter__block', this)">
                             Arraial do cabo
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-02', 'a-filter__block', this)">
                             Carneiros
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-02', 'a-filter__block', this)">
                             Maragogi
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-02', 'a-filter__block', this)">
                             Trancoso
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="filter-container dropDown" id="filter-dropDown-03">
-                <Button id="status-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
+            <div class="a-filter__content" id="filter-dropDown-03">
+                <Button id="a-filter__status" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
                     Situação
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
-                <div class="option-wrapper">
-                    <ul class="option-dropdown" id="Form-Dropdown-03">
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                <div class="a-filter__wrapper">
+                    <ul class="a-filter__list text-variant-04 black-color" id="Form-Dropdown-03">
+                        <li onclick="changeElementText('Form-Dropdown-03', 'a-filter__status', this)">
                             Bloqueada
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-03', 'a-filter__status', this)">
                             Disponível
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-03', 'a-filter__status', this)">
                             Reservada
                         </li>
-                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        <li onclick="changeElementText('Form-Dropdown-03', 'a-filter__status', this)">
                             Vendida
                         </li>
                     </ul>
                 </div>
             </div>
-            <button id="filter-btn" class="text-variant-03 white-color" type="submit" onclick="getFiltersParams()">
+            <button id="a-filter__btn" class="text-variant-03 white-color" type="submit" onclick="getFiltersParams()">
                 Filtrar disponibilidade
             </button>
         </section>
     </aside>
     <main>
-        <header class="main-header" id="main-header">
-            <h2 id="main-title" class="text-variant-01 black-color">
+        <header id="m-header">
+            <h2 id="m-header__title" class="text-variant-01 black-color">
                 Unidades do empreendimento
             </h2>
-            <div id="main-dropdown">
-                <div id="main-dropdown-text"  onclick="clickDropdown('main-dropdown', 'main-dropdown-content')">
-                    <p id="sort-by" class="text-variant-03 gray-01-color">
+            <div id="m-header__container">
+                <div id="m-header__content"  onclick="clickDropdown('m-header__container', 'm-header__list')">
+                    <p id="m-header__text" class="text-variant-03 gray-01-color">
                         Ordenar por
-                            <strong id="sort-by-text" class="text-variant-01 gray-01-color">
+                            <strong id="m-header__strong" class="text-variant-01">
                                 Menor valor
                             </strong>
                     </p>
                     <img src="assets/icons/arrow.svg" alt="dropdown arrow icon" width="9" height="5">
                 </div>
-                <ul id="main-dropdown-content">
-                    <li id="sorted-by-lowest" class="main-dropdown-item text-variant-01 gray-01-color" onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
+                <ul id="m-header__list" class="text-variant-01 gray-01-color">
+                    <li id="sorted-by-lowest" class="m-header__item" onclick="sortByLowestValue('m-header__list', 'm-header__strong', this)">
                         Menor Valor
                     </li>
-                    <li id="sorted-by-highest" class="main-dropdown-item text-variant-01 gray-01-color" onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">
+                    <li id="sorted-by-highest" class="m-header__item" onclick="sortByHighestValue('m-header__list', 'm-header__strong', this)">
                         Maior Valor
                     </li>
                 </ul>
             </div>
         </header>
         <div class="dashed-line"></div>
-        <div class="table-container">
             <table title="table with enterprise units">
                 <thead>
                     <tr id="first-column-table">
@@ -265,7 +259,6 @@
                 <tbody id="table-body">
                 </tbody>
             </table>
-        </div>
     </main>
     <script src="script/data.js"></script>
     <script src="script/index.js"></script>

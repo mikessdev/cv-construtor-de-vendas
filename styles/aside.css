@@ -11,6 +11,14 @@ aside {
 
 /*================ Dropdown btn ================*/
 
+#available-units-container {
+    display: flex;
+}
+
+#available-units {
+    margin-right: 5px;
+}
+
 #dropDown-btn {
     display: flex;
     justify-content: flex-end;
@@ -43,13 +51,13 @@ aside {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.11);
 }
 
-.dropdown-content a {
+.dropdown-content li {
     display: block;
     padding: 0 10px 0 10px;
     border-radius: var(--default-radius);
 }
 
-.dropdown-content a:hover {
+.dropdown-content li:hover {
     background-color: var(--white-02-color);
 }
 
@@ -190,13 +198,13 @@ aside {
     background-color: var(--white-color);
 }
 
-.option-dropdown a {
+.option-dropdown li {
     display: block;
     padding: 0 10px 0 10px;
     border-radius: var(--default-radius);
 }
 
-.option-dropdown a:hover {
+.option-dropdown li:hover {
     background-color: var(--white-02-color);
 }
 

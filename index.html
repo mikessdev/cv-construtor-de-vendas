@@ -20,28 +20,41 @@
                 <h1 class="text-variant-01 black-color">
                     Varandas do Garcia
                 </h1>
-                <p id="available-units" class="text-variant-02 gray-01-color">
-                    1321 Unidade Disponível
-                </p>
+                <span id="available-units-container" class="text-variant-02 gray-01-color">
+                    <span id="available-units">
+                        0
+                    </span>
+                    <p >
+                         Unidade Disponível
+                    </p>
+                </span>
             </div>
             <div class="dropDown" id="dropDown-btn">
                 <Button class="info-dropdown-btn text-variant-03 white-color" onclick="clickDropdown('dropDown-btn', 'dropdownContent')">
                     Informações
-                    <img src="assets/icons/polygonWhite.svg" alt="dropdown arrow icon">
+                    <img src="assets/icons/polygon-white.svg" alt="dropdown arrow icon">
                 </Button>
-                <div class="dropdown-content " id="dropdownContent">
-                    <a class="text-variant-04 black-color" href="#">Tabela de Preços</a>
-                    <a class="text-variant-04 black-color" href="#">Valores dos Espaços</a>
-                    <a class="text-variant-04 black-color" href="#">Arquivos do empreendimento</a>
-                    <a class="text-variant-04 black-color" href="#">Materiais de Campanha</a>
-                </div>
+                <ul class="dropdown-content " id="dropdownContent">
+                    <li class="text-variant-04 black-color" href="#">
+                        Tabela de Preços
+                    </li>
+                    <li class="text-variant-04 black-color" href="#">
+                        Valores dos Espaços
+                    </li>
+                    <li class="text-variant-04 black-color" href="#">
+                        Arquivos do empreendimento
+                    </li>
+                    <li class="text-variant-04 black-color" href="#">
+                        Materiais de Campanha
+                    </li>
+                </ul>
             </div>
         </section>
         <hr class="dashed-line">
         <section id="percentage-bar-container">
             <div id="percentage-bar-header-container">
                 <div id="percentage-bar-text-container">
-                    <img src="assets/icons/trophy.svg" alt="trophy icon">
+                    <img src="assets/icons/trophy.svg" alt="trophy icon" width="17" height="17">
                     <p class="text-variant-05 black-color">
                         Status de venda
                     </p>
@@ -57,9 +70,9 @@
         </section>
         <hr class="dashed-line">
         <section>
-            <h3 class="text-variant-01 black-color">
+            <h2 class="text-variant-01 black-color">
                 Situação do empreendimento
-            </h3>
+            </h2>
             <div id="cards-container">
                 <div class="card-container">
                     <div class='card-elipse' id="elipse-blocked">
@@ -68,9 +81,9 @@
                         <span class="text-variant-01 gray-01-color" id="enterprise-blocked">
                             0
                         </span>
-                        <span class="text-variant-05 gray-01-color">
+                        <h3 class="text-variant-05 gray-01-color">
                             Bloqueada
-                        </span>
+                        </h3>
                     </div>
                 </div>
                 <div class="card-container">
@@ -80,9 +93,9 @@
                         <span class="text-variant-01 gray-01-color" id="enterprise-sold">
                             0
                         </span>
-                        <span class="text-variant-05 gray-01-color">
+                        <h3 class="text-variant-05 gray-01-color">
                             Vendida
-                        </span>
+                        </h3>
                     </div>
                 </div>
                 <div class="card-container">
@@ -92,9 +105,9 @@
                         <span class="text-variant-01 gray-01-color" id="enterprise-reserved">
                             0
                         </span>
-                        <span class="text-variant-05 gray-01-color">
+                        <h3 class="text-variant-05 gray-01-color">
                             Reservada
-                        </span>
+                        </h3>
                     </div>
                 </div>
                 <div class="card-container">
@@ -104,88 +117,85 @@
                         <span class="text-variant-01 gray-01-color" id="enterprise-available">
                             1321
                         </span>
-                        <span class="text-variant-05 gray-01-color">
+                        <h3 class="text-variant-05 gray-01-color">
                             Disponível
-                        </span>
+                        </h3>
                     </div>
                 </div>
             </div>
         </section>
         <hr class="dashed-line">
         <section>
-            <h3 class="text-variant-01 black-color filte-title">
+            <h2 class="text-variant-01 black-color filte-title">
                 Filtrar disponibilidade
-            </h3>
-            <div class="filter-container , dropDown" id="filter-dropDown-01">
-                <Button class="filter-select-btn" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
-                    <p id="stage-params" class="text-variant-02 gray-01-color">
-                        Escolha a etapa
+            </h2>
+            <div class="filter-container dropDown" id="filter-dropDown-01">
+                <Button  id="stage-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
+                    Escolha a etapa
                     </p>
-                    <img src="assets/icons/polygonGray.svg" alt="dropdown arrow icon">
+                    <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-01">
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                    <ul class="option-dropdown" id="Form-Dropdown-01">
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
                             Etapa 1
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
                             Etapa 2
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
                             Etapa 3
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-01', 'stage-params', this)">
                             Etapa 4
-                        </a>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="filter-container , dropDown" id="filter-dropDown-02">
-                <Button class="filter-select-btn" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
-                    <p id="block-params" class="text-variant-02 gray-01-color">
-                        Escolha a quadra
+            <div class="filter-container dropDown" id="filter-dropDown-02">
+                <Button id="block-params" class="filter-select-btn text-variant-02 gray-01-color" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
+                    Escolha a quadra
                     </p>
-                    <img src="assets/icons/polygonGray.svg" alt="dropdown arrow icon">
+                    <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-02">
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                    <ul class="option-dropdown" id="Form-Dropdown-02">
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
                             Arraial do cabo
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
                             Carneiros
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
                             Maragogi
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-02', 'block-params', this)">
                             Trancoso
-                        </a>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="filter-container , dropDown" id="filter-dropDown-03">
-                <Button class="filter-select-btn" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
-                    <p id="status-params" class="text-variant-02 gray-01-color">
-                        Situação
+            <div class="filter-container dropDown" id="filter-dropDown-03">
+                <Button id="status-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
+                    Situação
                     </p>
-                    <img src="assets/icons/polygonGray.svg" alt="dropdown arrow icon">
+                    <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
-                    <div class="option-dropdown" id="Form-Dropdown-03">
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                    <ul class="option-dropdown" id="Form-Dropdown-03">
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
                             Bloqueada
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
                             Disponível
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
                             Reservada
-                        </a>
-                        <a class="text-variant-04 black-color" href="#" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
+                        </li>
+                        <li class="text-variant-04 black-color" onclick="changeElementText('Form-Dropdown-03', 'status-params', this)">
                             Vendida
-                        </a>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <button id="filter-btn" class="text-variant-03 white-color" type="submit" onclick="getFiltersParams()">
@@ -195,9 +205,9 @@
     </aside>
     <main>
         <header class="main-header" id="main-header">
-            <p id="main-title" class="text-variant-01 black-color">
+            <h2 id="main-title" class="text-variant-01 black-color">
                 Unidades do empreendimento
-            </p>
+            </h2>
             <div id="main-dropdown">
                 <span onclick="clickDropdown('main-dropdown', 'main-dropdown-content')">
                     <p id="sort-by" class="text-variant-03 gray-01-color">
@@ -206,7 +216,7 @@
                                 Menor valor
                             </strong>
                     </p>
-                    <img src="assets/icons/arrow.svg">
+                    <img src="assets/icons/arrow.svg" alt="dropdown arrow icon" width="9" height="5">
                 </span>
                 <div id="main-dropdown-content">
                     <a id="sorted-by-lowest" class="main-dropdown-item text-variant-01 gray-01-color" href="#" onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
@@ -220,26 +230,38 @@
         </header>
         <div class="dashed-line"></div>
         <div class="table-container">
-            <table>
+            <table title="table with enterprise units">
                 <thead>
                     <tr id="first-column-table">
-                        <td class="table-title text-variant-06 gray-01-color">
-                            Bloco
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                Bloco
+                            </h3>
                         </td>
-                        <td class="table-title text-variant-06 gray-01-color">
-                            QTD. quartos
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                QTD. quartos
+                            </h3>
                         </td>
-                        <td class="table-title text-variant-06 gray-01-color">
-                            Andar
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                Andar
+                            </h3>
                         </td>
-                        <td class="table-title text-variant-06 gray-01-color">
-                            Área Total
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                Área Total
+                            </h3>
                         </td>
-                        <td class="table-title text-variant-06 gray-01-color">
-                            Coluna
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                Coluna
+                            </h3>
                         </td>
-                        <td class="table-title text-variant-06 gray-01-color">
-                            Estado
+                        <td>
+                            <h3 class="table-title text-variant-06 gray-01-color">
+                                Estado
+                            </h3>
                         </td>
                     </tr>
                 </thead>

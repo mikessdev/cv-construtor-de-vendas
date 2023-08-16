@@ -16,7 +16,7 @@ const soldUnits = enterpriseUnits.filter(e => e.status === sold).length;
 const blockedUnits = enterpriseUnits.filter(e => e.status === blocked).length;
 const reservedUnits = enterpriseUnits.filter(e => e.status === reserved).length;
 
-updateViewText('available-units', availableUnits, 'Unidade Disponível');
+updateViewText('available-units', availableUnits);
 updateViewText('enterprise-available', availableUnits);
 updateViewText('enterprise-sold', soldUnits);
 updateViewText('enterprise-blocked', blockedUnits);
@@ -144,12 +144,12 @@ function createTable(newTableData) {
     newTableData.forEach(element => {
         let tr = document.createElement("tr");
         let tableRow = `
-        ${mountTableLine(element.block, ' , first-row',  ' , vertical-dashed-line')}
-        ${mountTableLine(element.numberRooms, '', ' , vertical-dashed-line')}
-        ${mountTableLine(element.floor, '', ' , vertical-dashed-line')}
-        ${mountTableLine(element.totalArea, '', ' , vertical-dashed-line')}
+        ${mountTableLine(element.block, ' first-row',  ' vertical-dashed-line')}
+        ${mountTableLine(element.numberRooms, '', ' vertical-dashed-line')}
+        ${mountTableLine(element.floor, '', ' vertical-dashed-line')}
+        ${mountTableLine(element.totalArea, '', ' vertical-dashed-line')}
         ${mountTableLine(element.column)}
-        ${mountTableLine(element.status, `, last-row , ${setStatus(element.status)}` , ' , white-color')}
+        ${mountTableLine(element.status, ` last-row ${setStatus(element.status)}` , ' white-color')}
         `;
     
         table.appendChild(tr);
@@ -157,9 +157,9 @@ function createTable(newTableData) {
     });
 };
 
-function mountTableLine(prop, auxClass = '', dashedLine = '', textColor = ', black-color') {
+function mountTableLine(prop, auxClass = '', dashedLine = '', textColor = ' black-color') {
     return `<td class="row-container ${auxClass}">
-                <div class="row-content , ${dashedLine} text-variant-07 , ${textColor}">
+                <div class="row-content ${dashedLine} text-variant-07 ${textColor}">
                     ${prop} 
                 </div>
             </td>`

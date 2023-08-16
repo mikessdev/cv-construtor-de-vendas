@@ -20,14 +20,14 @@
                 <h1 class="text-variant-01 black-color">
                     Varandas do Garcia
                 </h1>
-                <span id="available-units-container" class="text-variant-02 gray-01-color">
+                <div id="available-units-container" class="text-variant-02 gray-01-color">
                     <span id="available-units">
                         0
                     </span>
-                    <p >
+                    <p>
                          Unidade Disponível
                     </p>
-                </span>
+                </div>
             </div>
             <div class="dropDown" id="dropDown-btn">
                 <Button class="info-dropdown-btn text-variant-03 white-color" onclick="clickDropdown('dropDown-btn', 'dropdownContent')">
@@ -35,16 +35,16 @@
                     <img src="assets/icons/polygon-white.svg" alt="dropdown arrow icon">
                 </Button>
                 <ul class="dropdown-content " id="dropdownContent">
-                    <li class="text-variant-04 black-color" href="#">
+                    <li class="text-variant-04 black-color">
                         Tabela de Preços
                     </li>
-                    <li class="text-variant-04 black-color" href="#">
+                    <li class="text-variant-04 black-color">
                         Valores dos Espaços
                     </li>
-                    <li class="text-variant-04 black-color" href="#">
+                    <li class="text-variant-04 black-color">
                         Arquivos do empreendimento
                     </li>
-                    <li class="text-variant-04 black-color" href="#">
+                    <li class="text-variant-04 black-color">
                         Materiais de Campanha
                     </li>
                 </ul>
@@ -132,7 +132,6 @@
             <div class="filter-container dropDown" id="filter-dropDown-01">
                 <Button  id="stage-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-01', 'Form-Dropdown-01')">
                     Escolha a etapa
-                    </p>
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
@@ -155,7 +154,6 @@
             <div class="filter-container dropDown" id="filter-dropDown-02">
                 <Button id="block-params" class="filter-select-btn text-variant-02 gray-01-color" onclick=" clickDropdown('filter-dropDown-02', 'Form-Dropdown-02')">
                     Escolha a quadra
-                    </p>
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
@@ -178,7 +176,6 @@
             <div class="filter-container dropDown" id="filter-dropDown-03">
                 <Button id="status-params" class="filter-select-btn text-variant-02 gray-01-color" onclick="clickDropdown('filter-dropDown-03', 'Form-Dropdown-03')">
                     Situação
-                    </p>
                     <img src="assets/icons/polygon-gray.svg" alt="dropdown arrow icon">
                 </Button>
                 <div class="option-wrapper">
@@ -218,13 +215,13 @@
                     </p>
                     <img src="assets/icons/arrow.svg" alt="dropdown arrow icon" width="9" height="5">
                 </span>
-                <div id="main-dropdown-content">
-                    <a id="sorted-by-lowest" class="main-dropdown-item text-variant-01 gray-01-color" href="#" onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
+                <ul id="main-dropdown-content">
+                    <li id="sorted-by-lowest" class="main-dropdown-item text-variant-01 gray-01-color" onclick="sortByLowestValue('main-dropdown-content', 'sort-by-text', this)">
                         Menor Valor
-                    </a>
-                    <a id="sorted-by-highest" class="main-dropdown-item text-variant-01 gray-01-color" href="#" onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">
+                    </li>
+                    <li id="sorted-by-highest" class="main-dropdown-item text-variant-01 gray-01-color" onclick="sortByHighestValue('main-dropdown-content', 'sort-by-text', this)">
                         Maior Valor
-                    </a>
+                    </li>
                 </div>
             </div>
         </header>

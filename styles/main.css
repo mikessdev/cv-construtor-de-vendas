@@ -18,7 +18,7 @@ main {
     margin-left: 7px;
 }
 
-#main-dropdown span {
+#main-dropdown-text {
     display: flex;
     align-items: center;
 }
